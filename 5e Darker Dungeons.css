@@ -6,6 +6,10 @@
     margin: 0;
     overflow: hidden;
     padding: 0;
+    font-family: 'queen__countryregular';
+    src: url('.\fonts\webfontkit-20230801-040843\queencountry-webfont.woff2') format('woff2'), url('.\fonts\webfontkit-20230801-040843\queencountry-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
   .charsheet .sheet-darkerdungeons *,
   .charsheet .sheet-darkerdungeons *::after,
@@ -147,19 +151,20 @@
   height: 30px;
   position: relative;
   z-index: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-container-bar::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png") 103 103 103 103 fill stretch;
-    border-style: solid;
-    border-width: 30px 30px 0;
-    box-sizing: border-box;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1; }
+    .charsheet .sheet-darkerdungeons .sheet-container-bar::before {
+        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 103 103 103 103 fill stretch;
+        border-style: solid;
+        border-width: 30px 30px 0;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
   .charsheet .sheet-darkerdungeons .sheet-container-bar.sheet-container-bar-left {
     flex-direction: row-reverse; }
     .charsheet .sheet-darkerdungeons .sheet-container-bar.sheet-container-bar-left .sheet-container-header::after {
@@ -204,19 +209,20 @@
   z-index: 0;
   min-width: 0;
   overflow: hidden; }
-  .charsheet .sheet-darkerdungeons .sheet-container-box::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
-    border-style: solid;
-    border-width: 15px 15px;
-    box-sizing: border-box;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1; }
+    .charsheet .sheet-darkerdungeons .sheet-container-box::before {
+        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-style: solid;
+        border-width: 15px 15px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
   .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-header {
     font-size: 8px;
     font-weight: bold;
@@ -349,19 +355,20 @@
   min-width: 0;
   position: relative;
   z-index: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-container-panel::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
-    border-style: solid;
-    border-width: 15px 15px;
-    box-sizing: border-box;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1; }
+    .charsheet .sheet-darkerdungeons .sheet-container-panel::before {
+        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-style: solid;
+        border-width: 15px 15px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
   .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-header {
     border-bottom: 2px solid #202020;
     color: #202020;
@@ -414,19 +421,20 @@
   position: relative;
   z-index: 0;
   margin-top: 3px; }
-  .charsheet .sheet-darkerdungeons .sheet-container-spell::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
-    border-style: solid;
-    border-width: 15px 15px;
-    box-sizing: border-box;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1; }
+    .charsheet .sheet-darkerdungeons .sheet-container-spell::before {
+        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-style: solid;
+        border-width: 15px 15px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
   .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header {
     z-index: 2;
     border: 0;
