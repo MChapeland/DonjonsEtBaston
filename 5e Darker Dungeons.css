@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'queen_countryregular';
+    src: url("https://github.com/MChapeland/ParchmentCS/blob/225970ced17421257625609e3067ad521edcd518/fonts/queen_and_country/queencountry-webfont.woff2") format('woff2'), 
+         url("https://github.com/MChapeland/ParchmentCS/blob/225970ced17421257625609e3067ad521edcd518/fonts/queen_and_country/queencountry-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .charsheet .sheet-darkerdungeons {
     background: url("https://github.com/MChapeland/ParchmentCS/blob/f0e7e88aefdb41cfe4b0e5adecf61a6349ea3122/img/background.png?raw=true");
     color: black;
@@ -5,11 +13,7 @@
     line-height: 18px;
     margin: 0;
     overflow: hidden;
-    padding: 0;
-    font-family: 'queen__countryregular';
-    src: url('.\fonts\webfontkit-20230801-040843\queencountry-webfont.woff2') format('woff2'), url('.\fonts\webfontkit-20230801-040843\queencountry-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    padding: 0;    
 }
   .charsheet .sheet-darkerdungeons *,
   .charsheet .sheet-darkerdungeons *::after,
@@ -1082,15 +1086,16 @@
 .sheet-rolltemplate-atk a[href^="~"]:visited {
   pointer-events: none; }
 .sheet-rolltemplate-spell .sheet-container {
-  width: 263px;
-  background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/spellbg.jpg) center center;
-  background-size: auto;
-  background-repeat: repeat;
-  color: black;
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
-  margin-left: -45px;
-  border: 1px solid black; }
+    width: 263px;
+    background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/spellbg.jpg) center center;
+    background-size: auto;
+    background-repeat: repeat;
+    color: black;
+    font-family: 'queen_countryregular';
+    padding: 10px;
+    margin-left: -45px;
+    border: 1px solid black;
+}
 .withoutavatars .sheet-rolltemplate-spell .sheet-container {
   margin-left: -15px; }
 .sheet-rolltemplate-spell .sheet-row {
@@ -1119,22 +1124,24 @@
   margin-top: 5px; }
 .sheet-rolltemplate-npcdmg {
   margin-top: -8px; }
-.sheet-rolltemplate-npc .sheet-header,
-.sheet-rolltemplate-npcaction .sheet-header,
-.sheet-rolltemplate-npcatk .sheet-header,
-.sheet-rolltemplate-npcdmg .sheet-header {
-  color: #7e2d40;
-  font-size: 18px;
-  text-align: left;
-  font-family: "Times New Roman", Times, serif;
-  font-variant: small-caps; }
+    .sheet-rolltemplate-npc .sheet-header,
+    .sheet-rolltemplate-npcaction .sheet-header,
+    .sheet-rolltemplate-npcatk .sheet-header,
+    .sheet-rolltemplate-npcdmg .sheet-header {
+        color: #7e2d40;
+        font-size: 18px;
+        text-align: left;
+        font-family: 'queen_countryregular';
+        font-variant: small-caps;
+    }
 .sheet-rolltemplate-traits .sheet-header {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  text-transform: capitalize;
-  font-variant: small-caps;
-  font-weight: bold;
-  color: #7e2d40; }
+    font-family: 'queen_countryregular';
+    font-size: 16px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #7e2d40;
+}
 .sheet-rolltemplate-npc .sheet-italics,
 .sheet-rolltemplate-npcaction .sheet-italics,
 .sheet-rolltemplate-npcatk .sheet-italics,
@@ -1604,18 +1611,7 @@
           font-weight: bold;
           line-height: 1.5;
           color: #cccccc; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo {
-    grid-area: logo;
-    padding: 15px 15px 6px;
-    text-align: center; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo div {
-      background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");
-      width: 219.84px;
-      height: 52px;
-      display: block;
-      background-size: 100%;
-      margin: 0 auto; }
-.sheet-tabs {
+  .sheet-tabs {
   position: relative;
   width: 800px; }
   .sheet-tabs::after {
