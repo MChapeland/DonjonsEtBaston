@@ -513,19 +513,20 @@
   padding: 10px;
   position: relative;
   z-index: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-container-well::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-well-border.png") 96 314 96 314 fill stretch;
-    border-style: solid;
-    border-width: 32px 101px;
-    box-sizing: border-box;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1; }
+    .charsheet .sheet-darkerdungeons .sheet-container-well::before {
+        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/df8330f0b7b7851885bc8d8e7d2446fb6bbb259a/img/sheet-well-border.png?raw=true") 96 314 96 314 fill stretch;
+        border-style: solid;
+        border-width: 32px 101px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
 .charsheet .sheet-darkerdungeons fieldset {
   position: relative; }
 .charsheet .sheet-darkerdungeons .repcontainer {
