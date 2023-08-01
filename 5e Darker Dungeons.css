@@ -1,11 +1,12 @@
 .charsheet .sheet-darkerdungeons {
-  background: white;
-  color: black;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 0;
-  overflow: visible;
-  padding: 0; }
+    background: url("https://github.com/MChapeland/ParchmentCS/blob/f0e7e88aefdb41cfe4b0e5adecf61a6349ea3122/img/background.png?raw=true");
+    color: black;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
   .charsheet .sheet-darkerdungeons *,
   .charsheet .sheet-darkerdungeons *::after,
   .charsheet .sheet-darkerdungeons *::before {
