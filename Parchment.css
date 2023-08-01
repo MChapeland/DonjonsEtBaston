@@ -1,19 +1,18 @@
 @font-face {
     font-family: 'queen_countryregular';
-    src: url("https://github.com/MChapeland/ParchmentCS/blob/225970ced17421257625609e3067ad521edcd518/fonts/queen_and_country/queencountry-webfont.woff2") format('woff2'), 
-         url("https://github.com/MChapeland/ParchmentCS/blob/225970ced17421257625609e3067ad521edcd518/fonts/queen_and_country/queencountry-webfont.woff") format('woff');
+    src: url("https://github.com/MChapeland/ParchmentCS/raw/main/fonts/queen_and_country/queencountry.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
 .charsheet .sheet-darkerdungeons {
-    background: url("https://github.com/MChapeland/ParchmentCS/blob/f0e7e88aefdb41cfe4b0e5adecf61a6349ea3122/img/background.png?raw=true");
+    background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/background.png");
     color: black;
     font-size: 13px;
     line-height: 18px;
     margin: 0;
     overflow: hidden;
-    padding: 0;    
+    padding: 0;
 }
   .charsheet .sheet-darkerdungeons *,
   .charsheet .sheet-darkerdungeons *::after,
@@ -156,7 +155,7 @@
   position: relative;
   z-index: 0; }
     .charsheet .sheet-darkerdungeons .sheet-container-bar::before {
-        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 103 103 103 103 fill stretch;
+        border-image: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/sheet-box-border.png") 103 103 103 103 fill stretch;
         border-style: solid;
         border-width: 30px 30px 0;
         box-sizing: border-box;
@@ -214,7 +213,7 @@
   min-width: 0;
   overflow: hidden; }
     .charsheet .sheet-darkerdungeons .sheet-container-box::before {
-        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-image: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/sheet-box-border.png") 50 50 50 50 fill stretch;
         border-style: solid;
         border-width: 15px 15px;
         box-sizing: border-box;
@@ -360,7 +359,7 @@
   position: relative;
   z-index: 0; }
     .charsheet .sheet-darkerdungeons .sheet-container-panel::before {
-        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-image: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/sheet-box-border.png") 50 50 50 50 fill stretch;
         border-style: solid;
         border-width: 15px 15px;
         box-sizing: border-box;
@@ -426,7 +425,7 @@
   z-index: 0;
   margin-top: 3px; }
     .charsheet .sheet-darkerdungeons .sheet-container-spell::before {
-        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/02ed8f77c0df49a1a62aa7d3f08ec8a7a9703403/img/sheet-box-border.png?raw=true") 50 50 50 50 fill stretch;
+        border-image: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/sheet-box-border.png") 50 50 50 50 fill stretch;
         border-style: solid;
         border-width: 15px 15px;
         box-sizing: border-box;
@@ -526,7 +525,7 @@
   position: relative;
   z-index: 0; }
     .charsheet .sheet-darkerdungeons .sheet-container-well::before {
-        border-image: url("https://github.com/MChapeland/ParchmentCS/blob/362cf3dc8780cf159271d978653cbcafb73656a1/img/sheet-well-border.png?raw=true") 96 314 96 314 fill stretch;
+        border-image: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/sheet-well-border.png") 96 314 96 314 fill stretch;
         border-style: solid;
         border-width: 32px 101px;
         box-sizing: border-box;
