@@ -1,15 +1,14 @@
 @font-face {
-    font-family: 'Queen Country Regular';
-    src: local('Queen Country Regular'), url("https://raw.githubusercontent.com/MChapeland/ParchmentCS/blob/2dee7dc055b9b003004eed7668b28ac35c4fead4/fonts/queen_and_country/queencountry.ttf");
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'QueenCountryRegular';
+    src: url('https://github.com/MChapeland/ParchmentCS/raw/main/fonts/queen_and_country/queencountry-webfont.woff2') format('woff2'), 
+         url('https://github.com/MChapeland/ParchmentCS/raw/main/fonts/queen_and_country/queencountry-webfont.woff') format('woff'); font-weight: normal;
 }
 
 .charsheet .sheet-parchment {
     background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/background.png");
     background-size: 100%;
     color: #45300a;
-    font-family: 'Queen Country Regular';
+    font-family: 'QueenCountryRegular';
     font-size: 13px;
     line-height: 18px;
     margin: -10px -10px -10px -10px;
