@@ -35,6 +35,7 @@
         margin: -10px -10px -10px -10px;
         overflow: hidden;
         padding: 0px;
+        color: var(--CBaseDarkest);
     }
 
     /* Forcing the page to follow the popup's border */ 
@@ -47,17 +48,19 @@
         /* Header */
         .charsheet .sheet-parchment .sheet-header {
             background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-header-bg.png");
-            background-size: 100% 100%;
+            background-size: inherit;
             display: grid;
-            grid-template-areas: ". logo . . ."
+            grid-template-areas: 
+                ". logo . . ."
                 ". logo . details ."
                 ". name . details ."
-                ". . . . .";
+                ". . . . ."
+                ;
             grid-template-columns: 18px 289px 38px auto 18px;
             grid-template-rows: 40px 33px 46px auto;
-            height: 286px;
-            width: 846px;
-            margin-bottom: 5px;
+            height: 216px;
+            width: 636px;
+            margin: 32px 16px 32px 16px;
         }
 
             .charsheet .sheet-parchment .sheet-header .sheet-header-details {
@@ -100,15 +103,10 @@
                     }
 
                         .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div input {
-                            border-left: 0;
-                            border-right: 0;
-                            border-top: 0;
-                            border-bottom: 1px solid black;
-                            border-radius: 0;
+                            border: none;
                             height: 19px;
                             padding: 0;
                             width: 100%;
-                            border-color: #cccccc;
                         }
 
                         .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div label {
@@ -116,7 +114,7 @@
                             text-transform: uppercase;
                             font-weight: bold;
                             line-height: 1.5;
-                            color: #cccccc;
+                            color: var(--CBaseDarkest);
                         }
 
             /* Header - PC's Name */
@@ -125,6 +123,12 @@
                 grid-area: name;
                 padding: 5px 15px;
             }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-name input {
+                    border: none;
+                    color: var(--CBaseDarkest);
+                    outline: none;
+                    background: none;
+                }
 
         /* Checkboxes */
         .charsheet .sheet-parchment .sheet-checkbox-image {
