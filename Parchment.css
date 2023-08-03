@@ -55,7 +55,8 @@
                 ". . . . .";
             grid-template-columns: 18px 289px 38px auto 18px;
             grid-template-rows: 40px 33px 46px auto;
-            height: 141px;
+            height: 286px;
+            width: 846px;
             margin-bottom: 5px;
         }
 
