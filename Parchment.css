@@ -1,15 +1,173 @@
-@font-face {
-    font-family: 'Berenika';
-    src: url('https://fonts.cdnfonts.com/css/berenika-2');
-}
 
-.charsheet .sheet-parchment {
-    background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/background.png");
-    background-size: 100%;
-    font-family: 'Berenika', sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    margin: -10px -10px -10px -10px;
-    overflow: hidden;
-    padding: 0px;
-}
+    /* Colors */
+    :root {
+        --CBase: #d3b28e;
+        --CBaseLight: #dec6ad;
+        --CBaseDark: #a97c50;
+        --CBaseDarker: #8b5e3c;
+        --CBaseDarkest: #603913;
+        --CWhite: #e6e7e83;
+        --CBlack: #808285;
+        --CRed: #e85069;
+        --COrange: #f89d74;
+        --CYellow: #fac779;
+        --CGreen: #a2d17d;
+        --CTurquoise: #7acab5;
+        --CBlue: #61bbd5;
+        --CMarine: #859dd1;
+        --CPurple: #ad89bf;
+        --CPink: #f48d9c;
+    }
+
+    /* Fetching the Berenika font */ 
+    @font-face {
+        font-family: 'Berenika';
+        src: url('https://fonts.cdnfonts.com/css/berenika-2');
+    }
+
+    /* Background Image */
+    .charsheet .sheet-parchment {
+        background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png");
+        background-size: 100%;
+        font-family: 'Berenika', sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        margin: -10px -10px -10px -10px;
+        overflow: hidden;
+        padding: 0px;
+    }
+
+    /* Forcing the page to follow the popup's border */ 
+    .charsheet .sheet-parchment *,
+    .charsheet .sheet-parchment *::after,
+    .charsheet .sheet-parchment *::before {
+        box-sizing: border-box;
+    }
+
+        /* Header */
+        .charsheet .sheet-parchment .sheet-header {
+            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-header-bg.png");
+            background-size: 100% 100%;
+            display: grid;
+            grid-template-areas: ". logo . . ."
+                ". logo . details ."
+                ". name . details ."
+                ". . . . .";
+            grid-template-columns: 18px 289px 38px auto 18px;
+            grid-template-rows: 40px 33px 46px auto;
+            height: 141px;
+            margin-bottom: 5px;
+        }
+
+            .charsheet .sheet-parchment .sheet-header .sheet-header-details {
+                grid-area: details;
+                overflow: hidden;
+                padding: 5px 35px;
+                position: relative;
+            }
+
+                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-form {
+                    height: 70px;
+                }
+
+                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-toggle-unchecked {
+                    height: 100%;
+                }
+
+                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-form-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 2.5px 5px;
+                }
+
+                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-checkbox-cog {
+                    right: 35px;
+                }
+
+                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-column-gap: 10px;
+                    height: 100%;
+                }
+
+                    .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+                        .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div input {
+                            border-left: 0;
+                            border-right: 0;
+                            border-top: 0;
+                            border-bottom: 1px solid black;
+                            border-radius: 0;
+                            height: 19px;
+                            padding: 0;
+                            width: 100%;
+                            border-color: #cccccc;
+                        }
+
+                        .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div label {
+                            font-size: 9px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            line-height: 1.5;
+                            color: #cccccc;
+                        }
+
+            /* Header - PC's Name */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-name {
+                display: flex;
+                grid-area: name;
+                padding: 5px 15px;
+            }
+
+        /* Checkboxes */
+        .charsheet .sheet-parchment .sheet-checkbox-image {
+            height: 14px;
+            overflow: hidden;
+            position: relative;
+            width: 14px;
+        }
+
+            .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox] {
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+            }
+
+                .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox]:checked ~ span {
+                    background: none;
+                }
+
+                    .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox]:checked ~ span::after {
+                        content: '';
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 100%;
+                        background: var(--CBaseDarkest);
+                    }
+
+            .charsheet .sheet-parchment .sheet-checkbox-image span {
+                overflow: hidden;
+                padding: 2px;
+                background: black;
+                border-radius: 100%;
+                border: 1px solid #272727;
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100% !important;
+            }
+
+    
