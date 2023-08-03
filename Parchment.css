@@ -47,7 +47,7 @@
 
         /* Header */
         .charsheet .sheet-parchment .sheet-header {
-            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-header-bg.svg");
+            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-header-bg.png");
             background-size: inherit;
             display: grid;
             grid-template-areas: 
