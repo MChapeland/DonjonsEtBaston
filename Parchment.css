@@ -1,11 +1,11 @@
 
     /* Colors */
     :root {
-        --CBase: #d3b28e;
-        --CBaseLight: #dec6ad;
+        --CBase: rgba(211, 178, 142, 1);
+        --CBaseLight: rgba(222, 198, 173, 1);
         --CBaseDark: #a97c50;
         --CBaseDarker: #8b5e3c;
-        --CBaseDarkest: #603913;
+        --CBaseDarkest: rgba(96, 57, 19, 1);
         --CWhite: #e6e7e83;
         --CBlack: #808285;
         --CRed: #e85069;
@@ -17,162 +17,285 @@
         --CMarine: #859dd1;
         --CPurple: #ad89bf;
         --CPink: #f48d9c;
+        --CButton: rgba(161, 90, 48, 1);
+        --CBackground: rgba(31, 31, 31, 1);
     }
 
-    /* Fetching the Berenika font */ 
+    /* Fetching the Berenika font */
     @font-face {
         font-family: 'Berenika';
-        src: url('https://fonts.cdnfonts.com/css/berenika-2');
+        src: url('https://fonts.cdnfonts.com/css/berenika-2?styles=126426');
     }
 
-    /* Background Image */
+    /* Character Sheet Parameters*/
     .charsheet .sheet-parchment {
-        background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png");
-        background-size: 100%;
         font-family: 'Berenika', sans-serif;
         font-size: 13px;
         line-height: 18px;
-        margin: -10px -10px -10px -10px;
-        overflow: hidden;
-        padding: 0px;
         color: var(--CBaseDarkest);
+        margin: -10px -10px -10px -10px;
+        overflow: visible;
+        background-color: var(--CBackground);
     }
 
-    /* Forcing the page to follow the popup's border */ 
-    .charsheet .sheet-parchment *,
-    .charsheet .sheet-parchment *::after,
-    .charsheet .sheet-parchment *::before {
-        box-sizing: border-box;
-    }
+    /* Background */
+        .charsheet .sheet-parchment .sheet-background {
+            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png");
+            background-size: 100%;
+            position: absolute;
+            padding: 20px;
+            background-color: var(--CBaseLight);
+        }
+        
 
-        /* Header */
+        /* Header Grid */
         .charsheet .sheet-parchment .sheet-header {
-            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-header-bg.png");
-            background-size: inherit;
             display: grid;
-            grid-template-areas: 
-                ". logo . . ."
-                ". logo . details ."
-                ". name . details ."
-                ". . . . ."
-                ;
-            grid-template-columns: 18px 289px 38px auto 18px;
-            grid-template-rows: 40px 33px 46px auto;
-            height: 216px;
-            width: 636px;
-            margin: 32px 16px 32px 16px;
+            grid-template-columns: repeat(40, 20px);
+            grid-template-rows: repeat(8, 20px);
         }
 
-            .charsheet .sheet-parchment .sheet-header .sheet-header-details {
-                grid-area: details;
-                overflow: hidden;
-                padding: 5px 35px;
-                position: relative;
+            /* Header - Photo */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-photo {
+                grid-column: 1/8;
+                grid-row: 1/8;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
             }
-
-                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-form {
-                    height: 70px;
+                .charsheet .sheet-parchment .sheet-header .sheet-header-photo img {
+                    border-radius: 14px;
                 }
 
-                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-toggle-unchecked {
-                    height: 100%;
-                }
-
-                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-form-body {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    padding: 2.5px 5px;
-                }
-
-                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-checkbox-cog {
-                    right: 35px;
-                }
-
-                .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    grid-column-gap: 10px;
-                    height: 100%;
-                }
-
-                    .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div {
-                        display: flex;
-                        flex-direction: column-reverse;
-                    }
-
-                        .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div input {
-                            border: none;
-                            height: 19px;
-                            padding: 0;
-                            width: 100%;
-                        }
-
-                        .charsheet .sheet-parchment .sheet-header .sheet-header-details .sheet-header-details-panel div label {
-                            font-size: 9px;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                            line-height: 1.5;
-                            color: var(--CBaseDarkest);
-                        }
-
-            /* Header - PC's Name */
+            /* Header - Name */
             .charsheet .sheet-parchment .sheet-header .sheet-header-name {
-                display: flex;
-                grid-area: name;
-                padding: 5px 15px;
+                grid-column: 8/25;
+                grid-row: 1/4;
             }
                 .charsheet .sheet-parchment .sheet-header .sheet-header-name input {
+                    width: 340px;
                     border: none;
-                    color: var(--CBaseDarkest);
                     outline: none;
                     background: none;
+                    color: var(--CBaseDarkest);
+                    font-size: 50px;
+                    position: relative;
+                    left: 15px;
+                    top: 15px;
                 }
 
-        /* Checkboxes */
-        .charsheet .sheet-parchment .sheet-checkbox-image {
-            height: 14px;
-            overflow: hidden;
-            position: relative;
-            width: 14px;
-        }
-
-            .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox] {
-                height: 100%;
-                left: 0;
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: 1;
+            /* Header - Race */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-race {
+                grid-column: 8/25;
+                grid-row: 4/8;
             }
-
-                .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox]:checked ~ span {
+                .charsheet .sheet-parchment .sheet-header .sheet-header-race input {
+                    width: 340px;
+                    border: none;
+                    outline: none;
                     background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 25px;
+                    position: relative;
+                    left: 15px;
+                    top: 15px;
                 }
 
-                    .charsheet .sheet-parchment .sheet-checkbox-image [type=checkbox]:checked ~ span::after {
-                        content: '';
-                        display: block;
-                        height: 100%;
-                        width: 100%;
-                        border-radius: 100%;
-                        background: var(--CBaseDarkest);
+            /* Header - Level */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-level {
+                grid-column: 26/41;
+                grid-row: 1/8;
+                border: 6px solid;
+                border-radius: 40px;
+                border-color: var(--CBaseDarker);
+                background: rgba(211, 178, 142, .5);
+                text-align: center;
+            }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-level label {
+                    color: var(--CBaseDarker);
+                    font-size: 25px;
+                    position: relative;
+                    left: 22px;
+                    top: 25px;
+                }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-level span {
+                    color: var(--CBaseDarkest);
+                    font-size: 50px;
+                    position: relative;
+                    left: -88px;
+                    top: 40px;
+                }
+
+            /* Header - Class */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-class {
+                grid-column: 32/40;
+                grid-row: 2/4;
+                border: 4px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
+                background: rgba(211, 178, 142, .5);
+            }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-class select {
+                    width: 110px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 17px;
+                    position: relative;
+                    left: 6px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment .sheet-header .sheet-header-class select:hover {
+                        color: var(--CBaseDarkest);
                     }
 
-            .charsheet .sheet-parchment .sheet-checkbox-image span {
-                overflow: hidden;
-                padding: 2px;
-                background: black;
-                border-radius: 100%;
-                border: 1px solid #272727;
-                display: block;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100% !important;
+            /* Header - Class Level */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel {
+                grid-column: 38/40;
+                grid-row: 2/4;
+                border: 4px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
             }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel select {
+                    text-align: center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 40px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 16px;
+                    position: relative;
+                    left: -4px;
+                    top: 3px;
+                }
+                    .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel input:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+            /* Header - Multiclass */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass {
+                grid-column: 32/40;
+                grid-row: 5/7;
+                border: 4px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
+                background: rgba(211, 178, 142, .5);
+            }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass select {
+                    width: 110px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 17px;
+                    position: relative;
+                    left: 6px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+            /* Header - Multiclass Level */
+            .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel {
+                grid-column: 38/40;
+                grid-row: 5/7;
+                border: 4px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
+            }
+                .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel select {
+                    text-align: center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 40px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 16px;
+                    position: relative;
+                    left: -4px;
+                    top: 3px;
+                }
+                    .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+
+        /* Tabs Grid */
+        .charsheet .sheet-parchment .sheet-tabs {
+            display: grid;
+            grid-template-columns: repeat(40, 20px);
+            grid-template-rows: repeat(5, 20px);
+        }
+
+            /* Tabs - Core */
+            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-core {
+                grid-column: 1/9;
+                grid-row: 1/5;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-core:hover {
+                    grid-column: 1/9;
+                    grid-row: 1/5;
+                    border: 6px solid;
+                    border-radius: 20px;
+                    border-color: var(--CBaseDarkest);
+                    background-color: rgba(161, 90, 48, 0.75);
+                }
+
+            /* Tabs - Power */
+            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-power {
+                grid-column: 10/18;
+                grid-row: 1/5;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background-color: rgba(161, 90, 48, 0.25);
+            }
+
+            /* Tabs - Items */
+            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-items {
+                grid-column: 19/27;
+                grid-row: 1/5;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background-color: rgba(161, 90, 48, 0.25);
+            }
+
+            /* Tabs - Story */
+            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-story {
+                grid-column: 28/36;
+                grid-row: 1/5;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background-color: rgba(161, 90, 48, 0.25);
+            }
+
+            /* Tabs - Options */
+            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-options {
+                grid-column: 37/41;
+                grid-row: 1/5;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background-color: rgba(161, 90, 48, 0.25);
+            }
+           
+
 
     
