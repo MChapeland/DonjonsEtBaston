@@ -1,437 +1,321 @@
 
-    /* Colors */
-    :root {
-        --CBase: rgba(211, 178, 142, 1);
-        --CBaseLight: rgba(222, 198, 173, 1);
-        --CBaseDark: #a97c50;
-        --CBaseDarker: #8b5e3c;
-        --CBaseDarkest: rgba(96, 57, 19, 1);
-        --CWhite: #e6e7e83;
-        --CBlack: #808285;
-        --CRed: #e85069;
-        --COrange: #f89d74;
-        --CYellow: #fac779;
-        --CGreen: #a2d17d;
-        --CTurquoise: #7acab5;
-        --CBlue: #61bbd5;
-        --CMarine: #859dd1;
-        --CPurple: #ad89bf;
-        --CPink: #f48d9c;
-        --CButton: rgba(161, 90, 48, 1);
-        --CBackground: rgba(31, 31, 31, 1);
-    }
+/* Colors */
+:root {
+    --CBase: rgba(211, 178, 142, 1);
+    --CBaseLight: rgba(222, 198, 173, 1);
+    --CBaseDark: #a97c50;
+    --CBaseDarker: #8b5e3c;
+    --CBaseDarkest: rgba(96, 57, 19, 1);
+    --CWhite: #e6e7e83;
+    --CBlack: #808285;
+    --CRed: rgba(232, 80, 105, 1);
+    --COrange: rgba(248, 157, 116, 1);
+    --CYellow: #fac779;
+    --CGreen: #a2d17d;
+    --CTurquoise: rgba(122, 202, 181, 1);
+    --CBlue: #61bbd5;
+    --CMarine: rgba(133, 157, 209, 1);
+    --CPurple: rgba(173, 137, 191, 1);
+    --CPink: #f48d9c;
+    --CButton: rgba(161, 90, 48, 1);
+    --CBackground: rgba(31, 31, 31, 1);
+}
 
-    /* Fetching the Berenika font */
-    @font-face {
-        font-family: 'Berenika';
-        src: url('https://fonts.cdnfonts.com/css/berenika-2?styles=126426');
-    }
-
-    /* Character Sheet Parameters*/
-    .charsheet .sheet-parchment {
-        font-family: 'Berenika', sans-serif;
-        font-size: 13px;
-        line-height: 18px;
-        color: var(--CBaseDarkest);
-        margin: -10px -10px -10px -10px;
-        overflow: visible;
-        background-color: var(--CBackground);
-        display: grid;
-        grid-template-columns: repeat(1, 840px);
-        grid-template-rows: repeat(1, 3500px);
-    }
+/* Fetching the Berenika font */
+@font-face {
+    font-family: 'Berenika';
+    src: url('https://fonts.cdnfonts.com/css/berenika-2?styles=126426');
+}
 
 
-        /* Background */
-        .charsheet .sheet-parchment .sheet-background {
-            grid-column: 1;
-            grid-row: 1;
-            background-color: var(--CBaseLight);
+/* Character Sheet Parameters*/
+.charsheet {
+    position: absolute;
+    margin: -10px -10px -10px -10px;
+    overflow: visible;
+    background-color: var(--CBackground);
+    display: grid;
+    grid-template-columns: repeat(1, 640px);
+    grid-template-rows: repeat(1, 2625px);
+}   
+    .charsheet .sheet-background {
+        grid-column: 1;
+        grid-row: 1;
         }
-            .charsheet .sheet-parchment .sheet-background img {
-                width: 100%;
-            }
-
-
-        /* Header - Photo */
-        .charsheet .sheet-parchment .sheet-header-photo {
-            grid-column: 2/9;
-            grid-row: 2/9;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
+        .charsheet .sheet-background img {
+            width: 100%;
         }
-        .charsheet .sheet-parchment .sheet-header-photo img {
+
+
+
+/* Header */
+.header {
+    margin: 20px 20px 20px 20px;
+    position: absolute;
+    font-family: 'Berenika', sans-serif;
+    color: var(--CBaseDarkest);
+    display: grid;
+    grid-template-columns: 120px 320px 120px;
+    grid-template-rows: 120px;
+    grid-template-areas: 'photo info level';
+    grid-gap: 20px;
+}
+
+    .header .header-photo {
+        grid-area: photo;
+        border: 6px solid;
+        border-radius: 20px;
+        border-color: var(--CBaseDark);
+    }
+        .header .header-photo img {
             border-radius: 14px;
         }
 
-        /* Header - Name */
-        .charsheet .sheet-parchment .sheet-header-name {
-            grid-column: 10/34;
-            grid-row: 2/4;
+    .header .header-info {
+        grid-area: info;
+        display: grid;
+        line-height: 0px;
+    }
+        .header .header-info input {
+            text-align: center;
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
         }
-            .charsheet .sheet-parchment .sheet-header-name input {
-                text-align: center;
-                width: 475px;
-                border: none;
-                outline: none;
-                background: none;
-                color: var(--CBaseDarkest);
-                font-size: 50px;
-                position: relative;
-                top: 110%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
 
-        /* Header - Race */
-        .charsheet .sheet-parchment .sheet-header-race {
-            grid-column: 10/34;
-            grid-row: 5/9;
+    .header .header-level {
+        grid-area: level;
+        display: grid;
+        border: 6px solid;
+        border-radius: 30px;
+        border-color: var(--CBaseDark);
+        background: rgba(211, 178, 142, .25);
+        line-height: 0px;
+    }
+        .header .header-level label {
+            text-align: center;
+            color: var(--CBaseDarker);
+            font-size: 30px;
+            margin-top: 20px;
         }
-            .charsheet .sheet-parchment .sheet-header-race input {
-                text-align: center;
-                width: 475px;
-                border: none;
-                outline: none;
-                background: none;
-                color: var(--CBaseDarker);
-                font-size: 23px;
-                position: relative;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-        /* Header - Title */
-        .charsheet .sheet-parchment .sheet-header-title {
-            grid-column: 10/34;
-            grid-row: 5/9;
+        .header .header-level span {
+            text-align: center;
+            color: var(--CBaseDarkest);
+            font-size: 50px;
+            margin-top: -5px;
         }
-            .charsheet .sheet-parchment .sheet-header-title input {
-                text-align: center;
-                width: 475px;
-                border: none;
-                outline: none;
-                background: none;
-                color: var(--CBaseDark);
-                font-size: 18px;
-                position: relative;
-                top: 75%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
 
-        /* Header - Level */
-        .charsheet .sheet-parchment .sheet-header-level {
-            grid-column: 35/42;
-            grid-row: 2/9;
+
+
+/* Tabs */
+.tabs {
+    margin: 160px 20px 20px 20px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px 80px;
+    grid-template-rows: 60px;
+    grid-template-areas: 'core power items story options';
+    grid-gap: 10px;
+}
+
+    .tabs .tabs-button {
+        display: grid;
+        height: max-content;
+        border: 6px solid;
+        border-radius: 20px;
+        border-color: var(--CBaseDark);
+        background-color: rgba(161, 90, 48, 0.25);
+    }
+        .tabs .tabs-button:hover {
+            border-color: var(--CBaseDarker);
+            background: rgba(161, 90, 48, 0.5);
+        }
+        .tabs .tabs-button:active {
+            background: rgba(161, 90, 48, 0.65);
+        }
+        .tabs .tabs-button:hover > img {
+            filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+        }
+
+    .tabs .tabs-img {
+        margin: 5px auto;
+        height: 35px;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+    }
+
+    .tabs .tabs-core {
+        grid-area: core;
+        display: grid;
+    }
+
+    .tabs .tabs-power {
+        grid-area: power;
+        display: grid;
+    }
+
+    .tabs .tabs-items {
+        grid-area: items;
+        display: grid;
+    }
+
+    .tabs .tabs-story {
+        grid-area: story;
+        display: grid;
+    }
+
+    .tabs .tabs-options {
+        grid-area: options;
+        display: grid;
+    }
+
+
+/* Core */
+.core {
+    margin: 240px 20px 20px 20px;
+    position: absolute;
+    font-family: 'Berenika', sans-serif;
+    color: var(--CBaseDarkest);
+    display: grid;
+    grid-template-columns: 200px 380px;
+    grid-template-rows: repeat(47, 20px);
+    grid-template-areas: 'stats resources';
+    grid-gap: 20px;
+}
+    .core .core-statblock {
+        height: 100px;
+        width: 80px;
+        position: relative;
+        border: 6px solid;
+        border-radius: 20px 20px 50px 50px;
+        border-color: var(--CBaseDark);
+        background: rgba(211, 178, 142, .25);
+    }
+        .core .core-statblock button {
+            position: absolute;
+            display: grid;
+            align-self: center;
+            height: 70px;
+            width: 68px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            border-radius: 15px 15px 15px 15px;
+            margin-top: -75px;
+        }
+    .core .core-statcircle {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        border: 4px solid;
+        border-radius: 20px 20px 20px 20px;
+        border-color: var(--CBaseDark);
+        background: rgba(211, 178, 142, 1);
+        margin-top: -40px;
+    }
+    .core .core-statmod {
+        display: grid;
+        text-align: center;
+        color: var(--CBaseDarkest);
+        font-size: 30px;
+        margin-top: -5px;
+    }
+    .core .core-statvalue {
+        display: grid;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 40px;
+        border: none;
+        outline: none;
+        background: none;
+        color: var(--CBaseDarker);
+        font-size: 16px;
+        margin-left: -5px;
+        margin-top: 3px;
+    }
+    .core .core-statname {
+        display: grid;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 8px;
+        color: var(--CBaseDark);
+    }
+    .core .core-stattoggle {
+        display: grid;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        border: 4px solid;
+        border-radius: 20px 20px 20px 20px;
+        border-color: var(--CBaseDark);
+        background: rgba(211, 178, 142, 1);
+        margin-top: -40px;
+        margin-left: 55px;
+    }
+    .core input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 20px;
+        width: 20px;
+        border: none;
+        border-radius: 20px 20px 20px 20px;
+        background: rgba(211, 178, 142, 1);
+        color: var(--CBaseDark);
+        margin-left: 5px;
+    }
+        .core input[type="checkbox"]:checked {
+            background-color: var(--CBaseDarker);
+        }
+
+    .core .core-stats {
+        grid-area: stats;
+        display: grid;
+    }
+        .core .core-stats .core-stats-str {
+            display: grid;
+            position: absolute;
+        }
+        .core .core-stats .core-stats-int {
+            display: grid;
+            position: absolute;
+            margin-left: 110px;
+        }
+        .core .core-stats .core-stats-dex {
+            display: grid;
+            margin-top: 120px;
+            position: absolute;
+        }
+        .core .core-stats .core-stats-wis {
+            display: grid;
+            margin-top: 120px;
+            margin-left: 110px;
+            position: absolute;
+        }
+        .core .core-stats .core-stats-con {
+            display: grid;
+            margin-top: 240px;
+            position: absolute;
+        }
+        .core .core-stats .core-stats-cha {
+            display: grid;
+            margin-top: 240px;
+            margin-left: 110px;
+            position: absolute;
+        }
+
+    .core .core-resources {
+        grid-area: resources;
+        display: grid;
+    }
+        .core .core-resources .core-resources-vitality {
+            display: grid;
+            position: relative;
             border: 6px solid;
             border-radius: 30px;
             border-color: var(--CBaseDark);
             background: rgba(211, 178, 142, .25);
-            text-align: center;
         }
-            .charsheet .sheet-parchment .sheet-header-level label {
-                color: var(--CBaseDarker);
-                font-size: 25px;
-                position: relative;
-                top: 22%;
-                left: 76%;
-                transform: translate(-50%, -50%);
-            }
-            .charsheet .sheet-parchment .sheet-header-level span {
-                color: var(--CBaseDarkest);
-                font-size: 50px;
-                position: relative;
-                top: 35%;
-                left: 0%;
-                transform: translate(-50%, -50%);
-            }
-
-
-
-
-        /* Tabs - Core */
-        .charsheet .sheet-parchment .sheet-tabs-core {
-            grid-column: 2/10;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-core:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-core:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-core img {
-                width: 30%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-            .charsheet .sheet-parchment .sheet-tabs-core button {
-                width: 148px;
-                height: 74px;
-                position: inherit;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                background: none;
-                transform: translate(-5%, -70%);
-            }
-
-        /* Tabs - Power */
-        .charsheet .sheet-parchment .sheet-tabs-power {
-            grid-column: 11/18;
-            grid-row: 10/14;
-        }
-            .charsheet .sheet-parchment .sheet-tabs-power:hover > button {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-power:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-power img {
-                width: 30%;
-                position: center;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-            .charsheet .sheet-parchment .sheet-tabs-power button {
-                width: 100%;
-                height: auto;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background-color: rgba(161, 90, 48, 0.25);
-            }
-
-        /* Tabs - Items */
-        .charsheet .sheet-parchment .sheet-tabs-items {
-            grid-column: 20/28;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-items:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-items:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-items img {
-                width: 25%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-            .charsheet .sheet-parchment .sheet-tabs-items button {
-                width: 148px;
-                height: 74px;
-                position: inherit;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                background: none;
-                transform: translate(-5%, -70%);
-            }
-
-        /* Tabs - Story */
-        .charsheet .sheet-parchment .sheet-tabs-story {
-            grid-column: 29/37;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-story:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-story:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-story img {
-                width: 30%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-            .charsheet .sheet-parchment .sheet-tabs-story button {
-                width: 148px;
-                height: 74px;
-                position: inherit;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                background: none;
-                transform: translate(-5%, -70%);
-            }
-
-        /* Tabs - Options */
-        .charsheet .sheet-parchment .sheet-tabs-options {
-            grid-column: 38/42;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-options:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-options:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-options img {
-                width: 55%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-            .charsheet .sheet-parchment .sheet-tabs-options button {
-                width: 148px;
-                height: 74px;
-                position: inherit;
-                border-radius: 20px;
-                border: none;
-                outline: none;
-                background: none;
-                transform: translate(-5%, -70%);
-            }
-           
-
-
-        /* Header - Class 
-            .charsheet .sheet-parchment  .sheet-header-class {
-                grid-column: 32/40;
-                grid-row: 2/4;
-                border: 5px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background: rgba(211, 178, 142, .5);
-            }
-                .charsheet .sheet-parchment  .sheet-header-class select {
-                    width: 110px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 17px;
-                    position: relative;
-                    left: 6px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment  .sheet-header-class select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Class Level 
-            .charsheet .sheet-parchment  .sheet-header-classlevel {
-                grid-column: 38/40;
-                grid-row: 2/4;
-                border: 5px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-            }
-                .charsheet .sheet-parchment  .sheet-header-classlevel select {
-                    text-align: center;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    width: 40px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 16px;
-                    position: relative;
-                    left: -4px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment  .sheet-header-classlevel select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Multiclass 
-            .charsheet .sheet-parchment  .sheet-header-multiclass {
-                grid-column: 32/40;
-                grid-row: 5/7;
-                border: 5px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background: rgba(211, 178, 142, .5);
-            }
-                .charsheet .sheet-parchment  .sheet-header-multiclass select {
-                    width: 110px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 17px;
-                    position: relative;
-                    left: 6px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment  .sheet-header-multiclass select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Multiclass Level 
-            .charsheet .sheet-parchment  .sheet-header-multiclasslevel {
-                grid-column: 38/40;
-                grid-row: 5/7;
-                border: 5px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-            }
-                .charsheet .sheet-parchment  .sheet-header-multiclasslevel select {
-                    text-align: center;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    width: 40px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 16px;
-                    position: relative;
-                    left: -4px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment  .sheet-header-multiclasslevel select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-                */
-
-    
