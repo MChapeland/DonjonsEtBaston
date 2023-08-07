@@ -37,19 +37,21 @@
         overflow: visible;
         background-color: var(--CBackground);
         display: grid;
-        grid-template-columns: repeat(42, 20px);
-        grid-template-rows: repeat(175, 20px);
+        grid-template-columns: repeat(1, 840px);
+        grid-template-rows: repeat(1, 3500px);
     }
+
 
         /* Background */
         .charsheet .sheet-parchment .sheet-background {
-            grid-column: 1/43;
-            grid-row: 1/175;
+            grid-column: 1;
+            grid-row: 1;
             background-color: var(--CBaseLight);
         }
             .charsheet .sheet-parchment .sheet-background img {
                 width: 100%;
             }
+
 
         /* Header - Photo */
         .charsheet .sheet-parchment .sheet-header-photo {
@@ -146,6 +148,184 @@
                 left: 0%;
                 transform: translate(-50%, -50%);
             }
+
+
+
+
+        /* Tabs - Core */
+        .charsheet .sheet-parchment .sheet-tabs-core {
+            grid-column: 2/10;
+            grid-row: 10/14;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-core:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-core:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-core img {
+                width: 30%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+            .charsheet .sheet-parchment .sheet-tabs-core button {
+                width: 148px;
+                height: 74px;
+                position: inherit;
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                background: none;
+                transform: translate(-5%, -70%);
+            }
+
+        /* Tabs - Power */
+        .charsheet .sheet-parchment .sheet-tabs-power {
+            grid-column: 11/18;
+            grid-row: 10/14;
+        }
+            .charsheet .sheet-parchment .sheet-tabs-power:hover > button {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-power:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-power img {
+                width: 30%;
+                position: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+            .charsheet .sheet-parchment .sheet-tabs-power button {
+                width: 100%;
+                height: auto;
+                border: 6px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background-color: rgba(161, 90, 48, 0.25);
+            }
+
+        /* Tabs - Items */
+        .charsheet .sheet-parchment .sheet-tabs-items {
+            grid-column: 20/28;
+            grid-row: 10/14;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-items:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-items:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-items img {
+                width: 25%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+            .charsheet .sheet-parchment .sheet-tabs-items button {
+                width: 148px;
+                height: 74px;
+                position: inherit;
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                background: none;
+                transform: translate(-5%, -70%);
+            }
+
+        /* Tabs - Story */
+        .charsheet .sheet-parchment .sheet-tabs-story {
+            grid-column: 29/37;
+            grid-row: 10/14;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-story:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-story:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-story img {
+                width: 30%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+            .charsheet .sheet-parchment .sheet-tabs-story button {
+                width: 148px;
+                height: 74px;
+                position: inherit;
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                background: none;
+                transform: translate(-5%, -70%);
+            }
+
+        /* Tabs - Options */
+        .charsheet .sheet-parchment .sheet-tabs-options {
+            grid-column: 38/42;
+            grid-row: 10/14;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-options:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-options:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-options img {
+                width: 55%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+            .charsheet .sheet-parchment .sheet-tabs-options button {
+                width: 148px;
+                height: 74px;
+                position: inherit;
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                background: none;
+                transform: translate(-5%, -70%);
+            }
+           
 
 
         /* Header - Class 
@@ -253,138 +433,5 @@
                     }
 
                 */
-
-
-        /* Tabs - Core */
-        .charsheet .sheet-parchment .sheet-tabs-core {
-            grid-column: 2/10;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-core:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-core:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-core img {
-                width: 30%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-
-        /* Tabs - Power */
-        .charsheet .sheet-parchment .sheet-tabs-power {
-            grid-column: 11/19;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-power:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-power:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-power img {
-                width: 30%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-
-        /* Tabs - Items */
-        .charsheet .sheet-parchment .sheet-tabs-items {
-            grid-column: 20/28;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-items:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-items:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-items img {
-                width: 25%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-
-        /* Tabs - Story */
-        .charsheet .sheet-parchment .sheet-tabs-story {
-            grid-column: 29/37;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-story:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-story:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-story img {
-                width: 30%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-
-        /* Tabs - Options */
-        .charsheet .sheet-parchment .sheet-tabs-options {
-            grid-column: 38/42;
-            grid-row: 10/14;
-            border: 6px solid;
-            border-radius: 20px;
-            border-color: var(--CBaseDark);
-            background-color: rgba(161, 90, 48, 0.25);
-        }
-            .charsheet .sheet-parchment .sheet-tabs-options:hover {
-                border-color: var(--CBaseDarker);
-                background: rgba(161, 90, 48, 0.5);
-            }
-                .charsheet .sheet-parchment .sheet-tabs-options:hover > img {
-                    border-color: var(--CBaseDarker);
-                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
-                }
-            .charsheet .sheet-parchment .sheet-tabs-options img {
-                width: 55%;
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
-            }
-           
-
 
     
