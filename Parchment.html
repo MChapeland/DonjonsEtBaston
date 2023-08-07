@@ -1,148 +1,164 @@
 <div class="sheet-parchment">
 	<div class="sheet-background">
-		<!--	Header	 -->
-		<div class="sheet-header">
-
-			<!--	Photo	 -->
-			<div class="sheet-header-photo">
-				<img name="attr_character_avatar">
-			</div>
-
-			<!--	Name	 -->
-			<div class="sheet-header-name">
-				<input contenteditable="true" type="text" name="attr_character_name" title="@{character_name}">
-			</div>
-
-			<!--	Race	 -->
-			<div class="sheet-header-race">
-				<input contenteditable="true" type="text" name="attr_race" title="@{race}">
-			</div>
-
-			<!--	Level	 -->
-			<div class="sheet-header-level">
-				<label>Level</label>
-				<span type="number" name="attr_base_level" title="@{base_level}">0</span>
-			</div>
-
-			<!--	Class	 -->
-			<div class="sheet-header-class">
-				<select name="attr_class">
-					<option value=""></option>
-					<option value="Barbarian">Barbarian</option>
-					<option value="Bard">Bard</option>
-					<option value="Cleric">Cleric</option>
-					<option value="Druid">Druid</option>
-					<option value="Fighter">Fighter</option>
-					<option value="Monk">Monk</option>
-					<option value="Paladin">Paladin</option>
-					<option value="Ranger">Ranger</option>
-					<option value="Rogue">Rogue</option>
-					<option value="Sorcerer">Sorcerer</option>
-					<option value="Warlock">Warlock</option>
-					<option value="Wizard">Wizard</option>
-				</select>
-			</div>
-			<div class="sheet-header-classlevel">
-				<select name="attr_class_level">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-				</select>
-			</div>
-
-			<!--	Multiclass	 -->
-			<div class="sheet-header-multiclass">
-				<select name="attr_multiclass">
-					<option value=""></option>
-					<option value="Barbarian">Barbarian</option>
-					<option value="Bard">Bard</option>
-					<option value="Cleric">Cleric</option>
-					<option value="Druid">Druid</option>
-					<option value="Fighter">Fighter</option>
-					<option value="Monk">Monk</option>
-					<option value="Paladin">Paladin</option>
-					<option value="Ranger">Ranger</option>
-					<option value="Rogue">Rogue</option>
-					<option value="Sorcerer">Sorcerer</option>
-					<option value="Warlock">Warlock</option>
-					<option value="Wizard">Wizard</option>
-				</select>
-			</div>
-			<div class="sheet-header-multiclasslevel">
-				<select name="attr_multiclass_level">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-				</select>
-			</div>
-
-		</div>
-
-
-		<!--	Tabs	 -->
-		<div class="sheet-tabs">
-
-			<!--	Core	 -->
-			<div class="sheet-tabs-core">
-
-			</div>
-
-			<!--	Power	 -->
-			<div class="sheet-tabs-power">
-
-			</div>
-
-			<!--	Items	 -->
-			<div class="sheet-tabs-items">
-
-			</div>
-
-			<!--	Story	 -->
-			<div class="sheet-tabs-story">
-
-			</div>
-
-			<!--	Options	 -->
-			<div class="sheet-tabs-options">
-
-			</div>
-
-		</div>
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png" />
 	</div>
+	<!--	Photo	 -->
+	<div class="sheet-header-photo">
+		<img name="attr_character_avatar">
+	</div>
+
+	<!--	Name	 -->
+	<div class="sheet-header-name">
+		<input contenteditable="true" type="text" name="attr_name" title="@{name}" value="Name">
+	</div>
+
+
+	<!--	Race	 -->
+	<div class="sheet-header-race">
+		<input contenteditable="true" type="text" name="attr_race" title="@{race}" value="Race">
+	</div>
+
+	<!--	Title	 -->
+	<div class="sheet-header-title">
+		<input contenteditable="true" type="text" name="attr_title" title="@{title}" value="Title">
+	</div>
+
+	<!--	Level	 -->
+	<div class="sheet-header-level">
+		<label>Level</label>
+		<span type="number" name="attr_level" title="@{level}">0</span>
+	</div>
+
+	<!--	Class
+	<div class="sheet-header-class">
+		<select name="attr_class" title="@{class}">
+			<option value=""></option>
+			<option value="Barbarian">Barbarian</option>
+			<option value="Bard">Bard</option>
+			<option value="Cleric">Cleric</option>
+			<option value="Druid">Druid</option>
+			<option value="Fighter">Fighter</option>
+			<option value="Monk">Monk</option>
+			<option value="Paladin">Paladin</option>
+			<option value="Ranger">Ranger</option>
+			<option value="Rogue">Rogue</option>
+			<option value="Sorcerer">Sorcerer</option>
+			<option value="Warlock">Warlock</option>
+			<option value="Wizard">Wizard</option>
+		</select>
+	</div>
+	<div class="sheet-header-classlevel">
+		<select type=number name="attr_class_level" title="@{class_level}">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+		</select>
+	</div>
+		 -->
+	<!--	Multiclass
+	<div class="sheet-header-multiclass">
+		<select name="attr_multiclass" title="@{multiclass}">
+			<option value=""></option>
+			<option value="Barbarian">Barbarian</option>
+			<option value="Bard">Bard</option>
+			<option value="Cleric">Cleric</option>
+			<option value="Druid">Druid</option>
+			<option value="Fighter">Fighter</option>
+			<option value="Monk">Monk</option>
+			<option value="Paladin">Paladin</option>
+			<option value="Ranger">Ranger</option>
+			<option value="Rogue">Rogue</option>
+			<option value="Sorcerer">Sorcerer</option>
+			<option value="Warlock">Warlock</option>
+			<option value="Wizard">Wizard</option>
+		</select>
+	</div>
+	<div class="sheet-header-multiclasslevel">
+		<select type=number name="attr_multiclass_level" title="@{multiclass_level}">
+			<option type=number value="0">0</option>
+			<option type=number value="1">1</option>
+			<option type=number value="2">2</option>
+			<option type=number value="3">3</option>
+			<option type=number value="4">4</option>
+			<option type=number value="5">5</option>
+			<option type=number value="6">6</option>
+			<option type=number value="7">7</option>
+			<option type=number value="8">8</option>
+			<option type=number value="9">9</option>
+			<option type=number value="10">10</option>
+			<option type=number value="11">11</option>
+			<option type=number value="12">12</option>
+			<option type=number value="13">13</option>
+			<option type=number value="14">14</option>
+			<option type=number value="15">15</option>
+			<option type=number value="16">16</option>
+			<option type=number value="17">17</option>
+			<option type=number value="18">18</option>
+			<option type=number value="19">19</option>
+			<option type=number value="20">20</option>
+		</select>
+	</div>
+
+	-->
+	<!--	Core	 -->
+	<div class="sheet-tabs-core">
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-core.svg" />
+	</div>
+
+	<!--	Power	 -->
+	<div class="sheet-tabs-power">
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-power.svg" />
+	</div>
+
+	<!--	Items	 -->
+	<div class="sheet-tabs-items">
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-items.svg" />
+	</div>
+
+	<!--	Story	 -->
+	<div class="sheet-tabs-story">
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-story.svg" />
+	</div>
+
+	<!--	Options	 -->
+	<div class="sheet-tabs-options">
+		<img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-options.svg" />
+	</div>
+
 </div>
+
+<script type="text/worker">
+
+	on("sheet:opened change:class_level change:multiclass_level", function() {
+
+		getAttrs(["class_level","multiclass_level"], function(values) {
+
+			let cl = parseInt(values["class_level"])||0;
+			let ml = parseInt(values["multiclass_level"])||0;
+
+			setAttrs({	level: ml + cl	});
+
+		});
+
+	});
+
+</script>
+	

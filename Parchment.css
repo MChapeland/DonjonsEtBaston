@@ -36,264 +36,352 @@
         margin: -10px -10px -10px -10px;
         overflow: visible;
         background-color: var(--CBackground);
+        display: grid;
+        grid-template-columns: repeat(42, 20px);
+        grid-template-rows: repeat(200, 20px);
     }
-
-    /* Background */
+        /* Background */
         .charsheet .sheet-parchment .sheet-background {
-            background: url("https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png");
-            background-size: 100%;
-            position: absolute;
-            padding: 20px;
+            grid-column: 1/43;
+            grid-row: 1/180;
             background-color: var(--CBaseLight);
         }
-        
-
-        /* Header Grid */
-        .charsheet .sheet-parchment .sheet-header {
-            display: grid;
-            grid-template-columns: repeat(40, 20px);
-            grid-template-rows: repeat(8, 20px);
-        }
+            .charsheet .sheet-parchment .sheet-background img {
+                width: 100%;
+            }
 
             /* Header - Photo */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-photo {
-                grid-column: 1/8;
-                grid-row: 1/8;
+            .charsheet .sheet-parchment .sheet-header-photo {
+                grid-column: 2/9;
+                grid-row: 2/9;
                 border: 6px solid;
                 border-radius: 20px;
-                border-color: var(--CBaseDarker);
+                border-color: var(--CBaseDark);
             }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-photo img {
-                    border-radius: 14px;
-                }
-
-            /* Header - Name */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-name {
-                grid-column: 8/25;
-                grid-row: 1/4;
+            .charsheet .sheet-parchment .sheet-header-photo img {
+                border-radius: 14px;
             }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-name input {
-                    width: 340px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarkest);
-                    font-size: 50px;
-                    position: relative;
-                    left: 15px;
-                    top: 15px;
-                }
 
-            /* Header - Race */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-race {
-                grid-column: 8/25;
-                grid-row: 4/8;
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-race input {
-                    width: 340px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 25px;
-                    position: relative;
-                    left: 15px;
-                    top: 15px;
-                }
-
-            /* Header - Level */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-level {
-                grid-column: 26/41;
-                grid-row: 1/8;
-                border: 6px solid;
-                border-radius: 40px;
-                border-color: var(--CBaseDarker);
-                background: rgba(211, 178, 142, .5);
-                text-align: center;
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-level label {
-                    color: var(--CBaseDarker);
-                    font-size: 25px;
-                    position: relative;
-                    left: 22px;
-                    top: 25px;
-                }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-level span {
-                    color: var(--CBaseDarkest);
-                    font-size: 50px;
-                    position: relative;
-                    left: -88px;
-                    top: 40px;
-                }
-
-            /* Header - Class */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-class {
-                grid-column: 32/40;
-                grid-row: 2/4;
-                border: 4px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDarker);
-                background: rgba(211, 178, 142, .5);
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-class select {
-                    width: 110px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 17px;
-                    position: relative;
-                    left: 6px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment .sheet-header .sheet-header-class select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Class Level */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel {
-                grid-column: 38/40;
-                grid-row: 2/4;
-                border: 4px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDarker);
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel select {
-                    text-align: center;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    width: 40px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 16px;
-                    position: relative;
-                    left: -4px;
-                    top: 3px;
-                }
-                    .charsheet .sheet-parchment .sheet-header .sheet-header-classlevel input:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Multiclass */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass {
-                grid-column: 32/40;
-                grid-row: 5/7;
-                border: 4px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDarker);
-                background: rgba(211, 178, 142, .5);
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass select {
-                    width: 110px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 17px;
-                    position: relative;
-                    left: 6px;
-                    top: 2px;
-                }
-                    .charsheet .sheet-parchment .sheet-header .sheet-header-multiclass select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-            /* Header - Multiclass Level */
-            .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel {
-                grid-column: 38/40;
-                grid-row: 5/7;
-                border: 4px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDarker);
-            }
-                .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel select {
-                    text-align: center;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    width: 40px;
-                    border: none;
-                    outline: none;
-                    background: none;
-                    color: var(--CBaseDarker);
-                    font-size: 16px;
-                    position: relative;
-                    left: -4px;
-                    top: 3px;
-                }
-                    .charsheet .sheet-parchment .sheet-header .sheet-header-multiclasslevel select:hover {
-                        color: var(--CBaseDarkest);
-                    }
-
-
-        /* Tabs Grid */
-        .charsheet .sheet-parchment .sheet-tabs {
-            display: grid;
-            grid-template-columns: repeat(40, 20px);
-            grid-template-rows: repeat(5, 20px);
+        /* Header - Name */
+        .charsheet .sheet-parchment .sheet-header-name {
+            grid-column: 10/34;
+            grid-row: 2/4;
         }
+            .charsheet .sheet-parchment .sheet-header-name input {
+                text-align: center;
+                width: 475px;
+                border: none;
+                outline: none;
+                background: none;
+                color: var(--CBaseDarkest);
+                font-size: 50px;
+                position: relative;
+                top: 110%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
-            /* Tabs - Core */
-            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-core {
-                grid-column: 1/9;
-                grid-row: 1/5;
-                border: 6px solid;
+        /* Header - Race */
+        .charsheet .sheet-parchment .sheet-header-race {
+            grid-column: 10/34;
+            grid-row: 5/9;
+        }
+            .charsheet .sheet-parchment .sheet-header-race input {
+                text-align: center;
+                width: 475px;
+                border: none;
+                outline: none;
+                background: none;
+                color: var(--CBaseDarker);
+                font-size: 23px;
+                position: relative;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        /* Header - Title */
+        .charsheet .sheet-parchment .sheet-header-title {
+            grid-column: 10/34;
+            grid-row: 5/9;
+        }
+            .charsheet .sheet-parchment .sheet-header-title input {
+                text-align: center;
+                width: 475px;
+                border: none;
+                outline: none;
+                background: none;
+                color: var(--CBaseDark);
+                font-size: 18px;
+                position: relative;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        /* Header - Level */
+        .charsheet .sheet-parchment .sheet-header-level {
+            grid-column: 35/42;
+            grid-row: 2/9;
+            border: 6px solid;
+            border-radius: 30px;
+            border-color: var(--CBaseDark);
+            background: rgba(211, 178, 142, .25);
+            text-align: center;
+        }
+            .charsheet .sheet-parchment .sheet-header-level label {
+                color: var(--CBaseDarker);
+                font-size: 25px;
+                position: relative;
+                top: 22%;
+                left: 76%;
+                transform: translate(-50%, -50%);
+            }
+            .charsheet .sheet-parchment .sheet-header-level span {
+                color: var(--CBaseDarkest);
+                font-size: 50px;
+                position: relative;
+                top: 35%;
+                left: 0%;
+                transform: translate(-50%, -50%);
+            }
+
+
+        /* Header - Class 
+            .charsheet .sheet-parchment  .sheet-header-class {
+                grid-column: 32/40;
+                grid-row: 2/4;
+                border: 5px solid;
                 border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background: rgba(211, 178, 142, .5);
+            }
+                .charsheet .sheet-parchment  .sheet-header-class select {
+                    width: 110px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 17px;
+                    position: relative;
+                    left: 6px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment  .sheet-header-class select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+            /* Header - Class Level 
+            .charsheet .sheet-parchment  .sheet-header-classlevel {
+                grid-column: 38/40;
+                grid-row: 2/4;
+                border: 5px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+            }
+                .charsheet .sheet-parchment  .sheet-header-classlevel select {
+                    text-align: center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 40px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 16px;
+                    position: relative;
+                    left: -4px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment  .sheet-header-classlevel select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+            /* Header - Multiclass 
+            .charsheet .sheet-parchment  .sheet-header-multiclass {
+                grid-column: 32/40;
+                grid-row: 5/7;
+                border: 5px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+                background: rgba(211, 178, 142, .5);
+            }
+                .charsheet .sheet-parchment  .sheet-header-multiclass select {
+                    width: 110px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 17px;
+                    position: relative;
+                    left: 6px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment  .sheet-header-multiclass select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+            /* Header - Multiclass Level 
+            .charsheet .sheet-parchment  .sheet-header-multiclasslevel {
+                grid-column: 38/40;
+                grid-row: 5/7;
+                border: 5px solid;
+                border-radius: 20px;
+                border-color: var(--CBaseDark);
+            }
+                .charsheet .sheet-parchment  .sheet-header-multiclasslevel select {
+                    text-align: center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 40px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--CBaseDarker);
+                    font-size: 16px;
+                    position: relative;
+                    left: -4px;
+                    top: 2px;
+                }
+                    .charsheet .sheet-parchment  .sheet-header-multiclasslevel select:hover {
+                        color: var(--CBaseDarkest);
+                    }
+
+                */
+
+
+        /* Tabs - Core */
+        .charsheet .sheet-parchment .sheet-tabs-core {
+            grid-column: 1/9;
+            grid-row: 9/13;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-core:hover {
                 border-color: var(--CBaseDarker);
                 background: rgba(161, 90, 48, 0.5);
             }
-                .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-core:hover {
-                    grid-column: 1/9;
-                    grid-row: 1/5;
-                    border: 6px solid;
-                    border-radius: 20px;
-                    border-color: var(--CBaseDarkest);
-                    background-color: rgba(161, 90, 48, 0.75);
+                .charsheet .sheet-parchment .sheet-tabs-core:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
                 }
-
-            /* Tabs - Power */
-            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-power {
-                grid-column: 10/18;
-                grid-row: 1/5;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background-color: rgba(161, 90, 48, 0.25);
+            .charsheet .sheet-parchment .sheet-tabs-core img {
+                width: 30%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
             }
 
-            /* Tabs - Items */
-            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-items {
-                grid-column: 19/27;
-                grid-row: 1/5;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background-color: rgba(161, 90, 48, 0.25);
+        /* Tabs - Power */
+        .charsheet .sheet-parchment .sheet-tabs-power {
+            grid-column: 10/18;
+            grid-row: 9/13;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-power:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-power:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-power img {
+                width: 30%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
             }
 
-            /* Tabs - Story */
-            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-story {
-                grid-column: 28/36;
-                grid-row: 1/5;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background-color: rgba(161, 90, 48, 0.25);
+        /* Tabs - Items */
+        .charsheet .sheet-parchment .sheet-tabs-items {
+            grid-column: 19/27;
+            grid-row: 9/13;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+    }
+            .charsheet .sheet-parchment .sheet-tabs-items:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-items:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-items img {
+                width: 25%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
             }
 
-            /* Tabs - Options */
-            .charsheet .sheet-parchment .sheet-tabs .sheet-tabs-options {
-                grid-column: 37/41;
-                grid-row: 1/5;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-                background-color: rgba(161, 90, 48, 0.25);
+        /* Tabs - Story */
+        .charsheet .sheet-parchment .sheet-tabs-story {
+            grid-column: 28/36;
+            grid-row: 9/13;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-story:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-story:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-story img {
+                width: 30%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
+            }
+
+        /* Tabs - Options */
+        .charsheet .sheet-parchment .sheet-tabs-options {
+            grid-column: 37/41;
+            grid-row: 9/13;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+            background-color: rgba(161, 90, 48, 0.25);
+        }
+            .charsheet .sheet-parchment .sheet-tabs-options:hover {
+                border-color: var(--CBaseDarker);
+                background: rgba(161, 90, 48, 0.5);
+            }
+                .charsheet .sheet-parchment .sheet-tabs-options:hover > img {
+                    border-color: var(--CBaseDarker);
+                    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(6190%) hue-rotate(353deg) brightness(98%) contrast(88%);
+                }
+            .charsheet .sheet-parchment .sheet-tabs-options img {
+                width: 55%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(35%) saturate(661%) hue-rotate(343deg) brightness(95%) contrast(91%);
             }
            
 
