@@ -38,29 +38,30 @@
         background-color: var(--CBackground);
         display: grid;
         grid-template-columns: repeat(42, 20px);
-        grid-template-rows: repeat(200, 20px);
+        grid-template-rows: repeat(175, 20px);
     }
+
         /* Background */
         .charsheet .sheet-parchment .sheet-background {
             grid-column: 1/43;
-            grid-row: 1/180;
+            grid-row: 1/175;
             background-color: var(--CBaseLight);
         }
             .charsheet .sheet-parchment .sheet-background img {
                 width: 100%;
             }
 
-            /* Header - Photo */
-            .charsheet .sheet-parchment .sheet-header-photo {
-                grid-column: 2/9;
-                grid-row: 2/9;
-                border: 6px solid;
-                border-radius: 20px;
-                border-color: var(--CBaseDark);
-            }
-            .charsheet .sheet-parchment .sheet-header-photo img {
-                border-radius: 14px;
-            }
+        /* Header - Photo */
+        .charsheet .sheet-parchment .sheet-header-photo {
+            grid-column: 2/9;
+            grid-row: 2/9;
+            border: 6px solid;
+            border-radius: 20px;
+            border-color: var(--CBaseDark);
+        }
+        .charsheet .sheet-parchment .sheet-header-photo img {
+            border-radius: 14px;
+        }
 
         /* Header - Name */
         .charsheet .sheet-parchment .sheet-header-name {
@@ -256,8 +257,8 @@
 
         /* Tabs - Core */
         .charsheet .sheet-parchment .sheet-tabs-core {
-            grid-column: 1/9;
-            grid-row: 9/13;
+            grid-column: 2/10;
+            grid-row: 10/14;
             border: 6px solid;
             border-radius: 20px;
             border-color: var(--CBaseDark);
@@ -282,8 +283,8 @@
 
         /* Tabs - Power */
         .charsheet .sheet-parchment .sheet-tabs-power {
-            grid-column: 10/18;
-            grid-row: 9/13;
+            grid-column: 11/19;
+            grid-row: 10/14;
             border: 6px solid;
             border-radius: 20px;
             border-color: var(--CBaseDark);
@@ -308,13 +309,13 @@
 
         /* Tabs - Items */
         .charsheet .sheet-parchment .sheet-tabs-items {
-            grid-column: 19/27;
-            grid-row: 9/13;
+            grid-column: 20/28;
+            grid-row: 10/14;
             border: 6px solid;
             border-radius: 20px;
             border-color: var(--CBaseDark);
             background-color: rgba(161, 90, 48, 0.25);
-    }
+        }
             .charsheet .sheet-parchment .sheet-tabs-items:hover {
                 border-color: var(--CBaseDarker);
                 background: rgba(161, 90, 48, 0.5);
@@ -334,8 +335,8 @@
 
         /* Tabs - Story */
         .charsheet .sheet-parchment .sheet-tabs-story {
-            grid-column: 28/36;
-            grid-row: 9/13;
+            grid-column: 29/37;
+            grid-row: 10/14;
             border: 6px solid;
             border-radius: 20px;
             border-color: var(--CBaseDark);
@@ -360,8 +361,8 @@
 
         /* Tabs - Options */
         .charsheet .sheet-parchment .sheet-tabs-options {
-            grid-column: 37/41;
-            grid-row: 9/13;
+            grid-column: 38/42;
+            grid-row: 10/14;
             border: 6px solid;
             border-radius: 20px;
             border-color: var(--CBaseDark);
