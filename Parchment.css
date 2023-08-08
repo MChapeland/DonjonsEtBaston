@@ -3,7 +3,7 @@
 :root {
     --CBase: rgba(211, 178, 142, 1);
     --CBaseLight: rgba(222, 198, 173, 1);
-    --CBaseDark: #a97c50;
+    --CBaseDark: rgba(169, 124, 80, 1);
     --CBaseDarker: #8b5e3c;
     --CBaseDarkest: rgba(96, 57, 19, 1);
     --CWhite: #e6e7e83;
@@ -322,4 +322,11 @@
             .core .core-resources .core-resources-vitality .core-resources-vitality-heart {
                 margin: 10px 10px 10px 10px;
                 height: 90px;
+                filter: brightness(0) saturate(100%) invert(80%) sepia(63%) saturate(3961%) hue-rotate(308deg) brightness(88%) contrast(115%);
+            }
+            .core .core-resources .core-resources-vitality .core-resources-vitality-border {
+                height: 90px;
+                position: absolute;
+                margin: 10px 10px 10px 10px;
+                filter: brightness(0) saturate(100%) invert(52%) sepia(52%) saturate(375%) hue-rotate(349deg) brightness(89%) contrast(88%);
             }
