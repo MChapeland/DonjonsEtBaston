@@ -1,30 +1,30 @@
+
 <!--	Sheet Parameters	 -->
 <div class="charsheet ">
 
     <!--	Background	 -->
     <div class="sheet-background">
-        <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-background.png" />
     </div>
 
 </div>
 
 
-<div class="header">
+<div class="sheet-header">
 
     <!--	Photo	 -->
-    <div class="header-photo">
+    <div class="sheet-header-photo">
         <img name="attr_character_avatar">
     </div>
 
     <!--	Info	 -->
-    <div class="header-info">
-        <input contenteditable="true" type="text" name="attr_name" title="@{name}" value="Name" style="color: var(--CBaseDarkest); font-size: 40px; margin-top: 5px;">
-        <input contenteditable="true" type="text" name="attr_race" title="@{race}" value="Race" style="color: var(--CBaseDark); font-size: 20px; margin-top: -15px;">
-        <input contenteditable="true" type="text" name="attr_title" title="@{title}" value="Title" style="color: var(--CBaseDarker); font-size: 15px; margin-top: -10px; ">
+    <div class="sheet-header-info">
+        <input contenteditable="true" type="text" name="attr_character_name" value="Name" style="color: var(--CBaseLight4); font-size: 40px; margin-top: 5px; font-weight: 700">
+        <input contenteditable="true" type="text" name="attr_race" value="Race" style="color: var(--CBaseLight1); font-size: 20px; margin-top: -15px; font-weight: 500">
+        <input contenteditable="true" type="text" name="attr_title" value="Title" style="color: var(--CBaseLight2); font-size: 15px; margin-top: -10px; font-weight: 500">
     </div>
 
     <!--	Level	 -->
-    <div class="header-level">
+    <div class="sheet-header-level">
         <label>Level</label>
         <span type="number" name="attr_level" title="@{level}">0</span>
     </div>
@@ -32,141 +32,172 @@
 </div>
 
 
-<div class="tabs">
+<div class="sheet-tabs">
 
     <!--	Core	 -->
-    <div class="tabs-core">
-        <button type="button" id="core_b" class="tabs-button">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-core.svg" class="tabs-img" />
+    <div class="sheet-tabs-core">
+        <button type="button" id="core_b" class="sheet-tabs-button">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-core.svg" class="sheet-tabs-img" />
         </button>
     </div>
 
     <!--	Power	 -->
-    <div class="tabs-power">
-        <button type="button" id="options_b" class="tabs-button">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-power.svg" class="tabs-img" />
+    <div class="sheet-tabs-power">
+        <button type="button" id="power_b" class="sheet-tabs-button">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-power.svg" class="sheet-tabs-img" />
         </button>
     </div>
 
     <!--	Items	 -->
-    <div class="tabs-items">
-        <button type="button" id="options_b" class="tabs-button">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-items.svg" class="tabs-img" />
+    <div class="sheet-tabs-items">
+        <button type="button" id="items_b" class="sheet-tabs-button">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-items.svg" class="sheet-tabs-img" />
         </button>
     </div>
 
     <!--	Story	 -->
-    <div class="tabs-story">
-        <button type="button" id="options_b" class="tabs-button">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-story.svg" class="tabs-img" />
+    <div class="sheet-tabs-story">
+        <button type="button" id="story_b" class="sheet-tabs-button">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-story.svg" class="sheet-tabs-img" />
         </button>
     </div>
 
     <!--	Options    -->
-    <div class="tabs-options">
-        <button type="button" id="options_b" class="tabs-button">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-options.svg" class="tabs-img" />
+    <div class="sheet-tabs-options">
+        <button type="button" id="options_b" class="sheet-tabs-button">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-options.svg" class="sheet-tabs-img" />
         </button>
     </div>
 </div>
 
 
-<div class="core">
+<div class="sheet-core">
 
     <!--	Stats	 -->
-    <div class="core-stats">
-        <div class="core-stats-str">
-            <div class="core-statblock" style="background-color: rgba(248, 157, 116, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Str</label>
-                <span type="number" name="attr_str_mod" title="@{str_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
+    <div class="sheet-core-stats">
+        <div class="sheet-core-stats-str">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Str</label>
+                <span type="number" name="attr_str_mod" title="@{str_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
             </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_str" title="@{str}" value="10" class="core-statvalue">
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_str" title="@{str}" value="10" class="sheet-core-statvalue">
             </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_str_prof" title="@{str_prof}">
-            </div>
-        </div>
-
-        <div class="core-stats-int">
-            <div class="core-statblock" style="background-color: rgba(173, 137, 191, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Int</label>
-                <span type="number" name="attr_int_mod" title="@{int_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
-            </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_int" title="@{int}" value="10" class="core-statvalue">
-            </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_int_prof" title="@{int_prof}">
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_str_prof" title="@{str_prof}">
             </div>
         </div>
 
-        <div class="core-stats-dex">
-            <div class="core-statblock" style="background-color: rgba(248, 157, 116, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Dex</label>
-                <span type="number" name="attr_dex_mod" title="@{dex_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
+        <div class="sheet-core-stats-int">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Int</label>
+                <span type="number" name="attr_int_mod" title="@{int_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
             </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_dex" title="@{dex}" value="10" class="core-statvalue">
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_int" title="@{int}" value="10" class="sheet-core-statvalue">
             </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_dex_prof" title="@{dex_prof}">
-            </div>
-        </div>
-
-        <div class="core-stats-wis">
-            <div class="core-statblock" style="background-color: rgba(173, 137, 191, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Wis</label>
-                <span type="number" name="attr_wis_mod" title="@{wis_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
-            </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_wis" title="@{wis}" value="10" class="core-statvalue">
-            </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_wis_prof" title="@{wis_prof}">
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_int_prof" title="@{int_prof}">
             </div>
         </div>
 
-        <div class="core-stats-con">
-            <div class="core-statblock" style="background-color: rgba(248, 157, 116, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Con</label>
-                <span type="number" name="attr_con_mod" title="@{con_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
+        <div class="sheet-core-stats-dex">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Dex</label>
+                <span type="number" name="attr_dex_mod" title="@{dex_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
             </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_con" title="@{con}" value="10" class="core-statvalue">
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_dex" title="@{dex}" value="10" class="sheet-core-statvalue">
             </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_con_prof" title="@{con_prof}">
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_dex_prof" title="@{dex_prof}">
             </div>
         </div>
 
-        <div class="core-stats-cha">
-            <div class="core-statblock" style="background-color: rgba(173, 137, 191, 0.2); ">
-                <label class="core-statname" style=" color: var(--CBaseDarker);">Cha</label>
-                <span type="number" name="attr_cha_mod" title="@{cha_mod}" class="core-statmod">0</span>
-                <button class="core-statblock-button"></button>
+        <div class="sheet-core-stats-wis">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Wis</label>
+                <span type="number" name="attr_wis_mod" title="@{wis_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
             </div>
-            <div class="core-statcircle">
-                <input contenteditable="true" type="number" name="attr_cha" title="@{cha}" value="10" class="core-statvalue">
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_wis" title="@{wis}" value="10" class="sheet-core-statvalue">
             </div>
-            <div class="core-stattoggle">
-                <input type="checkbox" class="core-checkbox" name="attr_cha_prof" title="@{cha_prof}">
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_wis_prof" title="@{wis_prof}">
+            </div>
+        </div>
+
+        <div class="sheet-core-stats-con">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Con</label>
+                <span type="number" name="attr_con_mod" title="@{con_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
+            </div>
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_con" title="@{con}" value="10" class="sheet-core-statvalue">
+            </div>
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_con_prof" title="@{con_prof}">
+            </div>
+        </div>
+
+        <div class="sheet-core-stats-cha">
+            <div class="sheet-core-statblock">
+                <label class="sheet-core-statname" style=" color: var(--CBaseDarker);">Cha</label>
+                <span type="number" name="attr_cha_mod" title="@{cha_mod}" class="sheet-core-statmod">0</span>
+                <button class="sheet-core-statblock-button"></button>
+            </div>
+            <div class="sheet-core-statcircle">
+                <input contenteditable="true" type="number" name="attr_cha" title="@{cha}" value="10" class="sheet-core-statvalue">
+            </div>
+            <div class="sheet-core-stattoggle">
+                <input type="checkbox" class="sheet-core-checkbox" name="attr_cha_prof" title="@{cha_prof}">
             </div>
         </div>
     </div>
 
 
     <!--	Resources	 -->
-    <div class="core-resources">
+    <div class="sheet-core-resources">
 
-        <div class="core-resources-vitality">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart.svg" class="core-resources-vitality-heart" />
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart-border.svg" class="core-resources-vitality-border" />
+        <div class="sheet-core-resources-vitality">
+
+            <div class="sheet-core-resources-vitality-heart">
+                <input contenteditable="true" type="number" name="attr_hp" title="@{hp}" value="0" class="sheet-core-resources-vitality-heart-value">
+                <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart.svg" class="sheet-core-resources-vitality-heart-bg" />
+                <div class="sheet-core-resources-vitality-heart-fill">
+                    <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart.svg" />
+                </div>
+                <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart-border.svg" class="sheet-core-resources-vitality-heart-border" />
+            </div>
+
+            <div class="sheet-core-resources-vitality-armor">
+                <span type="number" name="attr_ac" title="@{ac}">0</span>
+                <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-armor.svg" class="sheet-core-resources-vitality-armor-fill" />
+                <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-armor-border.svg" class="sheet-core-resources-vitality-armor-border" />
+            </div>
+
+
+            <div class="sheet-core-resources-vitality-proficiency">
+                <div class="sheet-core-resources-vitality-box">
+                    <span type="number" name="attr_proficiency" title="@{proficiency}">0</span>
+                    <label>Proficiency</label>
+                    <label>Bonus</label>
+                </div>
+            </div>
+
+            <div class="sheet-core-resources-vitality-passiveperception">
+                <div class="sheet-core-resources-vitality-box">
+                    <span type="number" name="attr_passive_perception" title="@{passive_perception}" class="sheet-core-resources-vitality-value">0</span>
+                    <label>Passive</label>
+                    <label>Perception</label>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -177,20 +208,38 @@
 
 
 
+
 <script type="text/worker">
 
-    on("sheet:opened change:class_level change:multiclass_level", function() {
+    ['str', 'dex', 'con', 'int', 'wis', 'cha'].forEach(attr => {
+                on(`change:${attr}`, function() {
+                    update_mod(`${attr}`);
 
-        getAttrs(["class_level","multiclass_level"], function(values) {
+                    const cap = attr.charAt(0).toUpperCase() + attr.slice(1);
+                    check_customac(cap);
 
-            let cl = parseInt(values["class_level"])||0;
-            let ml = parseInt(values["multiclass_level"])||0;
+                    (attr === "strength") ? update_weight(): false;
+                    (attr === "dexterity") ? update_initiative(): false;
+                    (attr === "intelligence") ? update_initiative(): false;
+                });
+            });
 
-            setAttrs({	level: ml + cl	});
+    var update_mod = function(attr) {
+                getAttrs([attr], function(v) {
+                    var finalattr = v[attr] && isNaN(v[attr]) === false ? Math.floor((parseInt(v[attr], 10) - 10) / 2) : 0;
+                    var update = {};
+                    update[attr + "_mod"] = finalattr;
+                    setAttrs(update);
+                });
+            };
 
-        });
-
-    });
+    on("change:hp", function() {
+                getAttrs(["hp", "ac"], function(v) {
+                        var update = {};
+                        update.ac = 0;
+                        setAttrs(update);
+                });
+            });
 
 </script>
 
