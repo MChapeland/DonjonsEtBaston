@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DnD to Homebrew Currency Translator</title>
+
+    <style>
+
+        input {
+            padding: 5px;
+            border-radius: 4px;
+            font-family: sans-serif;
+            background-color: dimgrey;
+            font-weight: bold;
+            color: white;
+            width: 30px;
+            margin: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            font-family: sans-serif;
+            color: grey;
+            margin: 2px;
+        }
+
+        button {
+            font-weight: bold;
+            font-family: sans-serif;
+            color: #191919;
+            background-color: lightgrey;
+        }
+
+        .copp {
+            color: #E48C45;
+        }
+
+        .silv {
+            color: #CDCDCD;
+        }
+
+        .gold {
+            color: #FFCA4E;
+        }
+
+        .plat {
+            color: #A6B1E1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div style="margin: auto; width: 430px; background-color: #191919; padding: 5px; ">
+
+        <br>
+
+        <label></label><label></label><label></label><label></label>
+        <span class="label copp" for="in1">⬤</span>
+        <input type="text" id="in1" name="">
+
+        <label></label>
+        <span class="label silv" for="in2">⬤</span>
+        <input type="text" id="in2" name="">
+
+        <label></label>
+        <span class="label gold" for="in3">⬤</span>
+        <input type="text" id="in3" name="">
+
+        <label></label>
+        <span class="label plat" for="in4">⬤</span>
+        <input type="text" id="in4" name="">
+
+        <label></label><label></label><label></label>
+        <button onclick="calc();">Calculate</button>
+
+        <br><br>
+
+        <label></label><label></label><label></label><label></label>
+        <span class="label copp" for="out1">⬤</span>
+        <label id="out1">0</label>
+
+        <label></label><label></label>
+        <span class="label silv" for="out2">⬤</span>
+        <label id="out2">0</label>
+
+        <label></label><label></label>
+        <span class="label gold" for="out3">⬤</span>
+        <label id="out3">0</label>
+
+        <br><br><br>
+    </div>
+
+    <script>
+
+        function calc() {
+
+            var CP = Number(document.querySelector("#in1").value);
+            var SP = Number(document.querySelector("#in2").value);
+            var GP = Number(document.querySelector("#in3").value);
+            var PP = Number(document.querySelector("#in4").value);
+
+            var baseCP = CP;
+            var baseSP = SP * 10;
+            var baseGP = GP * 100;
+            var basePP = PP * 1000;
+
+            var baseTotal = baseCP + baseSP + baseGP + basePP;
+
+            var digits = baseTotal.toString().split('').reverse();
+
+            var newCP = (Number(digits[0]) || 0) + (Number(digits[1]) || 0) * 10;
+            var newSP = (Number(digits[2]) || 0) + (Number(digits[3]) || 0) * 10;
+            var newGP = (Number(digits[4]) || 0) + (Number(digits[5]) || 0) * 10;
+
+            document.querySelector("#out1").innerHTML = newCP;
+            document.querySelector("#out2").innerHTML = newSP;
+            document.querySelector("#out3").innerHTML = newGP;
+        }
+
+    </script>
+</body>
+</html>
