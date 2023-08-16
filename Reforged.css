@@ -1,0 +1,177 @@
+
+/* ----- Constant Variables ----- */
+:root {
+    --CBase: #414042;
+    --CBox: #4d4d4d;
+    --CBoxHover: #606060;
+    --CBoxClick: #353535;
+    --CBaseClick: #303030;
+    --CBaseLight4: #d1d3d4;
+    --CBaseLight3: #a7a9ac;
+    --CBaseLight2: rgba(147, 149, 152, 1);
+    --CBaseLight1: #6d6e71;
+    --CBaseDark: #2a2a2a;
+    --CBaseDarker: #8b5e3c;
+    --CBaseDarkest: rgba(96, 57, 19, 1);
+    --CWhite: #e6e7e83;
+    --CBlack: #808285;
+    --CRed: rgba(232, 80, 105, 1);
+    --COrange: rgba(248, 157, 116, 1);
+    --CYellow: #fac779;
+    --CGreen: #a2d17d;
+    --CTurquoise: rgba(122, 202, 181, 1);
+    --CBlue: #61bbd5;
+    --CMarine: rgba(133, 157, 209, 1);
+    --CPurple: rgba(173, 137, 191, 1);
+    --CPink: #f48d9c;
+    --CMapBG: #6b8bbc;
+    --CButton: rgba(161, 90, 48, 1);
+    --CBackground: rgba(31, 31, 31, 1);
+}
+
+
+/* ----- Page Parameters ----- */
+.charsheet {
+    position: absolute;
+    width: 830px;
+    height: 470px;
+    margin: -10px -10px -10px -10px;
+    overflow: hidden;
+    background-color: var(--CBackground);
+}
+
+.sidebar {
+    z-index: 10;
+    border-radius: 10px;
+    background-color: var(--CBase);
+    position: absolute;
+    width: 90px;
+    height: 470px;
+    display: grid;
+    grid-template-columns: 70px;
+    grid-template-rows: 70px 0px repeat(14, 70px);
+    grid-gap: 20px;
+    box-shadow: rgba(18, 18, 18, 0.8) 0px 0px 10px 0px;
+}
+
+    .sidebar:hover ~ sidebarDrop {
+        transform: translateX(0px);
+    }
+
+    .sidebar .sidebar-button {
+        z-index: 11;
+        transform: translate(10px, 10px);
+        border-radius: 5px;
+        background-color: var(--CBox);
+        border: none;
+        cursor: pointer;
+    }
+
+        .sidebar .sidebar-button:hover {
+            background-color: var(--CBoxHover);
+        }
+
+        .sidebar .sidebar-button:active {
+            background-color: var(--CBoxClick);
+        }
+
+
+    .sidebar img {
+        z-index: 11;
+        transform: translate(10px, 10px);
+        border-radius: 5px;
+        border: none;
+    }
+
+
+    .sidebar .sidebar-line {
+        transform: translate(20px, 8px);
+        z-index: 11;
+        border-radius: 2px;
+        border: 2px solid;
+        border-color: var(--CBoxHover);
+        width: 50px;
+    }
+
+.content {
+    z-index: 1;
+    margin: 10px 0px 0px 90px;
+    position: absolute;
+    width: 740px;
+    height: 450px;
+    overflow: hidden;
+}
+
+    .content .content-box {
+        margin-left: 30px;
+        width: 710px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: repeat(71, 10px);
+        grid-template-rows: repeat(45, 10px);
+        grid-gap: 0px;
+    }
+
+        .content .content-box .content-box-statblockTop {
+            width: 80px;
+            height: 90px;
+            background-color: var(--CBase);
+            border-radius: 10px 10px 5px 5px;
+        }
+
+        .content .content-box .content-box-statblockLeft {
+            width: 40px;
+            height: 30px;
+            background-color: var(--CBase);
+            border-radius: 5px 5px 5px 10px;
+        }
+
+        .content .content-box .content-box-statblockRight {
+            width: 30px;
+            height: 30px;
+            background-color: var(--CBase);
+            border-radius: 5px 5px 10px 5px;
+        }
+
+        .content .content-box .content-box-health {
+            width: 290px;
+            height: 40px;
+            background-color: var(--CBase);
+            border-radius: 10px;
+        }
+
+        .content .content-box .content-box-mana {
+            width: 180px;
+            height: 40px;
+            background-color: var(--CBase);
+            border-radius: 10px;
+        }
+
+        .content .content-box .content-box-square {
+            width: 80px;
+            height: 80px;
+            background-color: var(--CBase);
+            border-radius: 10px;
+        }
+
+        .content .content-box .content-box-rest {
+            width: 150px;
+            height: 40px;
+            background-color: var(--CBaseLight1);
+            border-radius: 5px 5px 5px 5px;
+            border: none;
+            cursor: pointer;
+        }
+            .content .content-box .content-box-rest:hover {
+                background-color: var(--CBaseLight2);
+            }
+            .content .content-box .content-box-rest:active {
+                background-color: var(--CBoxHover);
+            }
+
+        .content .content-box .content-box-skill {
+            width: 150px;
+            height: 30px;
+            background-color: var(--CBase);
+            border-radius: 5px;
+        }
