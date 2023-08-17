@@ -1,103 +1,148 @@
 
+<div class="sheet-charsheet">
 
-<div class="charsheet">
+
+    <input type="hidden" class="sheet-tabshow" name="attr_sheetTab" value="hidecharacter" />
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sheet-sidebar">
 
-        <div class="sidebar-button" name="act_character">
-            <img name="attr_character_avatar" style="width: 100%; height: 100%; margin: -10px;"/>
-        </div>
+        <button type="action" class="sheet-sidebar-button" name="act_character">
+            <img name="attr_character_avatar" style="width: 100%; height: 100%; filter: brightness(100%);" />
+        </button>
 
-        <div class="sidebar-line"></div>
+        <div class="sheet-sidebar-line"></div>
 
-        <div class="sidebar-button" name="act_core">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-core.svg" class="sheet-tabs-img" />
-        </div>
+        <button type="action" class="sheet-sidebar-button" name="act_core">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-core.svg" class="sheet-sheet-tabs-img" />
+        </button>
 
-        <div class="sidebar-button" name="act_power">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-power.svg" class="sheet-tabs-img" />
-        </div>
+        <button type="action" class="sheet-sidebar-button" name="act_power">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-power.svg" class="sheet-sheet-tabs-img" />
+        </button>
 
-        <div class="sidebar-button" name="act_items">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-items.svg" class="sheet-tabs-img" />
-        </div>
+        <button type="action" class="sheet-sidebar-button" name="act_inventory">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-items.svg" class="sheet-sheet-tabs-img" />
+        </button>
 
-        <div class="sidebar-button" name="act_options">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-story.svg" class="sheet-tabs-img" />
-        </div>
+        <button type="action" class="sheet-sidebar-button" name="act_options">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/sheet-tabs-options.svg" class="sheet-sheet-tabs-img" />
+        </button>
 
     </div>
 
-    <div class="content">
+    <div class="sheet-content">
+
+        <!-- Character -->
+        <div class="sheet-content-box-character" id="Character">
+
+        </div>
+
+
 
         <!-- Core -->
-        <div class="content-box" id="Core">
+        <div class="sheet-content-box-core" id="Core">
 
             <!-- STATS-->
             <!-- Strength -->
-            <div class="content-box-statblockTop" id="Strength_Top" style="grid-column-start:1; grid-row-start:1;">
+            <div class="sheet-content-box-core-statblockTop" id="Strength_Top" style="grid-column-start:1; grid-row-start:1;">
+                <label>Str</label>
+                <span type="number" name="attr_str_mod" title="@{str_mod}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Strength_Left" style="grid-column-start:1; grid-row-start:11;">
+            <div class="sheet-content-box-core-statblockLeft" id="Strength_Left" style="grid-column-start:1; grid-row-start:11;">
+                <input contenteditable="true" type="number" name="attr_str" title="@{str}" value="10" >
             </div>
 
-            <div class="content-box-statblockRight" id="Strength_Right" style="grid-column-start:6; grid-row-start:11;">
+            <div class="sheet-content-box-core-statblockRight" id="Strength_Right" style="grid-column-start:6; grid-row-start:11;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_str_prof" title="@{str_prof}">
+                </div>
             </div>
 
 
             <!-- Dexterity -->
-            <div class="content-box-statblockTop" id="Dexterity_Top" style="grid-column-start:1; grid-row-start:17;">
+            <div class="sheet-content-box-core-statblockTop" id="Dexterity_Top" style="grid-column-start:1; grid-row-start:17;">
+                <label>Dex</label>
+                <span type="number" name="attr_dex_mod" title="@{dex_mod}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Dexterity_Left" style="grid-column-start:1; grid-row-start:27;">
+            <div class="sheet-content-box-core-statblockLeft" id="Dexterity_Left" style="grid-column-start:1; grid-row-start:27;">
+                <input contenteditable="true" type="number" name="attr_dex" title="@{dex}" value="10">
             </div>
 
-            <div class="content-box-statblockRight" id="Dexterity_Right" style="grid-column-start:6; grid-row-start:27;">
+            <div class="sheet-content-box-core-statblockRight" id="Dexterity_Right" style="grid-column-start:6; grid-row-start:27;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_dex_prof" title="@{dex_prof}">
+                </div>
             </div>
 
 
             <!-- Constitution -->
-            <div class="content-box-statblockTop" id="Constitution_Top" style="grid-column-start:1; grid-row-start:33;">
+            <div class="sheet-content-box-core-statblockTop" id="Constitution_Top" style="grid-column-start:1; grid-row-start:33;">
+                <label>Con</label>
+                <span type="number" name="attr_con_mod" title="@{con_mod}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Constitution_Left" style="grid-column-start:1; grid-row-start:43;">
+            <div class="sheet-content-box-core-statblockLeft" id="Constitution_Left" style="grid-column-start:1; grid-row-start:43;">
+                <input contenteditable="true" type="number" name="attr_con" title="@{con}" value="10">
             </div>
 
-            <div class="content-box-statblockRight" id="Constitution_Right" style="grid-column-start:6; grid-row-start:43;">
+            <div class="sheet-content-box-core-statblockRight" id="Constitution_Right" style="grid-column-start:6; grid-row-start:43;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_con_prof" title="@{con_prof}">
+                </div>
             </div>
 
 
             <!-- Intelligence -->
-            <div class="content-box-statblockTop" id="Intelligence_Top" style="grid-column-start:12; grid-row-start:1;">
+            <div class="sheet-content-box-core-statblockTop" id="Intelligence_Top" style="grid-column-start:12; grid-row-start:1;">
+                <label>Int</label>
+                <span type="number" name="attr_int_mod" title="@{str_int}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Intelligence_Left" style="grid-column-start:12; grid-row-start:11;">
+            <div class="sheet-content-box-core-statblockLeft" id="Intelligence_Left" style="grid-column-start:12; grid-row-start:11;">
+                <input contenteditable="true" type="number" name="attr_int" title="@{int}" value="10">
             </div>
 
-            <div class="content-box-statblockRight" id="Intelligence_Right" style="grid-column-start:17; grid-row-start:11;">
+            <div class="sheet-content-box-core-statblockRight" id="Intelligence_Right" style="grid-column-start:17; grid-row-start:11;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_int_prof" title="@{int_prof}">
+                </div>
             </div>
 
 
             <!-- Wisdom -->
-            <div class="content-box-statblockTop" id="Wisdom_Top" style="grid-column-start:12; grid-row-start:17;">
+            <div class="sheet-content-box-core-statblockTop" id="Wisdom_Top" style="grid-column-start:12; grid-row-start:17;">
+                <label>Wis</label>
+                <span type="number" name="attr_wis_mod" title="@{wis_mod}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Wisdom_Left" style="grid-column-start:12; grid-row-start:27;">
+            <div class="sheet-content-box-core-statblockLeft" id="Wisdom_Left" style="grid-column-start:12; grid-row-start:27;">
+                <input contenteditable="true" type="number" name="attr_wis" title="@{wis}" value="10">
             </div>
 
-            <div class="content-box-statblockRight" id="Wisdom_Right" style="grid-column-start:17; grid-row-start:27;">
+            <div class="sheet-content-box-core-statblockRight" id="Wisdom_Right" style="grid-column-start:17; grid-row-start:27;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_wis_prof" title="@{wis_prof}">
+                </div>
             </div>
 
 
             <!-- Charisma -->
-            <div class="content-box-statblockTop" id="Charisma_Top" style="grid-column-start:12; grid-row-start:33;">
+            <div class="sheet-content-box-core-statblockTop" id="Charisma_Top" style="grid-column-start:12; grid-row-start:33;">
+                <label>Cha</label>
+                <span type="number" name="attr_cha_mod" title="@{cha_mod}">0</span>
             </div>
 
-            <div class="content-box-statblockLeft" id="Charisma_Left" style="grid-column-start:12; grid-row-start:43;">
+            <div class="sheet-content-box-core-statblockLeft" id="Charisma_Left" style="grid-column-start:12; grid-row-start:43;">
+                <input contenteditable="true" type="number" name="attr_cha" title="@{cha}" value="10">
             </div>
 
-            <div class="content-box-statblockRight" id="Charisma_Right" style="grid-column-start:17; grid-row-start:43;">
+            <div class="sheet-content-box-core-statblockRight" id="Charisma_Right" style="grid-column-start:17; grid-row-start:43;">
+                <div class="sheet-content-box-core-statblockRight-box">
+                    <input type="checkbox" name="attr_cha_prof" title="@{cha_prof}">
+                </div>
             </div>
 
 
@@ -105,37 +150,37 @@
 
             <!-- VALUES -->
             <!-- Health -->
-            <div class="content-box-health" id="Health" style="grid-column-start:23; grid-row-start:1;">
+            <div class="sheet-content-box-core-health" id="Health" style="grid-column-start:23; grid-row-start:1;">
             </div>
 
 
             <!-- Mana -->
-            <div class="content-box-mana" id="Mana" style="grid-column-start:54; grid-row-start:1;">
+            <div class="sheet-content-box-core-mana" id="Mana" style="grid-column-start:54; grid-row-start:1;">
             </div>
 
 
             <!-- Heal -->
-            <div class="content-box-square" id="Heal" style="width: 90px !important; grid-column-start:23; grid-row-start:7;">
+            <div class="sheet-content-box-core-square" id="Heal" style="width: 90px !important; grid-column-start:23; grid-row-start:7;">
             </div>
 
 
             <!-- Armor -->
-            <div class="content-box-square" id="Armor" style="grid-column-start:34; grid-row-start:7;">
+            <div class="sheet-content-box-core-square" id="Armor" style="grid-column-start:34; grid-row-start:7;">
             </div>
 
 
             <!-- Speed -->
-            <div class="content-box-square" id="Speed" style="grid-column-start:44; grid-row-start:7;">
+            <div class="sheet-content-box-core-square" id="Speed" style="grid-column-start:44; grid-row-start:7;">
             </div>
 
 
             <!-- Awareness -->
-            <div class="content-box-square" id="Awareness" style="grid-column-start:54; grid-row-start:7;">
+            <div class="sheet-content-box-core-square" id="Awareness" style="grid-column-start:54; grid-row-start:7;">
             </div>
 
 
             <!-- Proficiency -->
-            <div class="content-box-square" id="Proficiency" style="grid-column-start:64; grid-row-start:7;">
+            <div class="sheet-content-box-core-square" id="Proficiency" style="grid-column-start:64; grid-row-start:7;">
             </div>
 
 
@@ -143,17 +188,20 @@
 
             <!-- REST BUTTONS -->
             <!-- New Turn -->
-            <div class="content-box-rest" id="New_Turn" style="grid-column-start: 23; grid-row-start: 17; border-radius: 15px 5px 5px 15px; ">
+            <div class="sheet-content-box-core-rest" id="New_Turn" style="grid-column-start: 23; grid-row-start: 17; border-radius: 15px 5px 5px 15px; ">
+                <label>New Turn</label>
             </div>
 
 
             <!-- Short Rest -->
-            <div class="content-box-rest" id="Short_Rest" style="grid-column-start:40; grid-row-start:17;">
+            <div class="sheet-content-box-core-rest" id="Short_Rest" style="grid-column-start:40; grid-row-start:17;">
+                <label>Short Rest</label>
             </div>
 
 
             <!-- Long Rest -->
-            <div class="content-box-rest" id="Long_Rest" style="grid-column-start: 57; grid-row-start: 17; border-radius: 5px 15px 15px 5px;">
+            <div class="sheet-content-box-core-rest" id="Long_Rest" style="grid-column-start: 57; grid-row-start: 17; border-radius: 5px 15px 15px 5px;">
+                <label>Long Rest</label>
             </div>
 
 
@@ -161,111 +209,248 @@
 
             <!-- SKILL CHECKS -->
             <!-- Acrobatics -->
-            <div class="content-box-skill" id="Acrobatics" style="grid-column-start: 23; grid-row-start: 23; border-radius: 10px 5px 5px 5px;">
+            <div class="sheet-content-box-core-skill" id="Acrobatics" style="grid-column-start: 23; grid-row-start: 23; border-radius: 10px 5px 5px 5px;">
+                <div class="sheet-content-box-core-skill-button" style="border-radius: 10px 5px 5px 5px;">
+                    <label>Acrobatics</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box" style="border-radius: 6.5px 2.5px 2.5px 2.5px;">
+                    <input type="checkbox">
+                </div>
+
             </div>
 
 
             <!-- Animal Handling -->
-            <div class="content-box-skill" id="Animal_Handling" style="grid-column-start: 23; grid-row-start: 27;">
+            <div class="sheet-content-box-core-skill" id="Animal_Handling" style="grid-column-start: 23; grid-row-start: 27;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Animal Handling</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Arcana -->
-            <div class="content-box-skill" id="Arcana" style="grid-column-start: 23; grid-row-start: 31;">
+            <div class="sheet-content-box-core-skill" id="Arcana" style="grid-column-start: 23; grid-row-start: 31;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Arcana</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Athletics -->
-            <div class="content-box-skill" id="Athletics" style="grid-column-start: 23; grid-row-start: 35;">
+            <div class="sheet-content-box-core-skill" id="Athletics" style="grid-column-start: 23; grid-row-start: 35;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Athletics</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Deception -->
-            <div class="content-box-skill" id="Deception" style="grid-column-start: 23; grid-row-start: 39;">
+            <div class="sheet-content-box-core-skill" id="Deception" style="grid-column-start: 23; grid-row-start: 39;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Deception</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- History -->
-            <div class="content-box-skill" id="History" style="grid-column-start: 23; grid-row-start: 43; border-radius: 5px 5px 5px 10px;">
+            <div class="sheet-content-box-core-skill" id="History" style="grid-column-start: 23; grid-row-start: 43; border-radius: 5px 5px 5px 10px;">
+                <div class="sheet-content-box-core-skill-button"  style="border-radius: 5px 5px 5px 10px;">
+                    <label>History</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box" style=" border-radius: 2.5px 2.5px 2.5px 6.5px;">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Insight -->
-            <div class="content-box-skill" id="Insight" style="grid-column-start: 40; grid-row-start: 23;">
+            <div class="sheet-content-box-core-skill" id="Insight" style="grid-column-start: 40; grid-row-start: 23;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Insight</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Intimidation -->
-            <div class="content-box-skill" id="Intimidation" style="grid-column-start: 40; grid-row-start: 27;">
+            <div class="sheet-content-box-core-skill" id="Intimidation" style="grid-column-start: 40; grid-row-start: 27;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Intimidation</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Investigation -->
-            <div class="content-box-skill" id="Investigation" style="grid-column-start: 40; grid-row-start: 31;">
+            <div class="sheet-content-box-core-skill" id="Investigation" style="grid-column-start: 40; grid-row-start: 31;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Investigation</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Medicine -->
-            <div class="content-box-skill" id="Medicine" style="grid-column-start: 40; grid-row-start: 35;">
+            <div class="sheet-content-box-core-skill" id="Medicine" style="grid-column-start: 40; grid-row-start: 35;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Medicine</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Nature -->
-            <div class="content-box-skill" id="Nature" style="grid-column-start: 40; grid-row-start: 39;">
+            <div class="sheet-content-box-core-skill" id="Nature" style="grid-column-start: 40; grid-row-start: 39;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Nature</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Perception -->
-            <div class="content-box-skill" id="Perception" style="grid-column-start: 40; grid-row-start: 43;">
+            <div class="sheet-content-box-core-skill" id="Perception" style="grid-column-start: 40; grid-row-start: 43;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Perception</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Performance -->
-            <div class="content-box-skill" id="Performance" style="grid-column-start: 57; grid-row-start: 23; border-radius: 5px 10px 5px 5px; ">
+            <div class="sheet-content-box-core-skill" id="Performance" style="grid-column-start: 57; grid-row-start: 23; border-radius: 5px 10px 5px 5px; ">
+                <div class="sheet-content-box-core-skill-button"  style="border-radius: 5px 10px 5px 5px;">
+                    <label>Performance</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Persuasion -->
-            <div class="content-box-skill" id="Persuasion" style="grid-column-start: 57; grid-row-start: 27;">
+            <div class="sheet-content-box-core-skill" id="Persuasion" style="grid-column-start: 57; grid-row-start: 27;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Persuasion</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Religion -->
-            <div class="content-box-skill" id="Religion" style="grid-column-start: 57; grid-row-start: 31;">
+            <div class="sheet-content-box-core-skill" id="Religion" style="grid-column-start: 57; grid-row-start: 31;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Religion</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Sleight of Hand -->
-            <div class="content-box-skill" id="Sleight_Of_Hand" style="grid-column-start: 57; grid-row-start: 35;">
+            <div class="sheet-content-box-core-skill" id="Sleight_Of_Hand" style="grid-column-start: 57; grid-row-start: 35;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Sleight of Hand</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Stealth -->
-            <div class="content-box-skill" id="Stealth" style="grid-column-start: 57; grid-row-start: 39;">
+            <div class="sheet-content-box-core-skill" id="Stealth" style="grid-column-start: 57; grid-row-start: 39;">
+                <div class="sheet-content-box-core-skill-button">
+                    <label>Stealth</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
             <!-- Survival -->
-            <div class="content-box-skill" id="Survival" style="grid-column-start: 57; grid-row-start: 43; border-radius: 5px 5px 10px 5px; ">
+            <div class="sheet-content-box-core-skill" id="Survival" style="grid-column-start: 57; grid-row-start: 43; border-radius: 5px 5px 10px 5px; ">
+                <div class="sheet-content-box-core-skill-button" style="border-radius: 5px 5px 10px 5px;">
+                    <label>Survival</label>
+                </div>
+                <div class="sheet-content-box-core-skill-box">
+                    <input type="checkbox">
+                </div>
             </div>
 
 
 
         </div>
 
-            <!-- Power -->
-            <div class="content-box" id="Power">
 
-            </div>
-        =
+
+        <!-- Power -->
+        <div class="sheet-content-box-power" id="Power">
+
+        </div>
+
+
+
+        <!-- Inventory -->
+        <div class="sheet-content-box-inventory" id="Inventory">
+
+        </div>
+
+
+
+        <!-- Options -->
+        <div class="sheet-content-box-options" id="Options">
+
+        </div>
+
     </div>
-
 
 
     <script type="text/worker">
 
+        const buttonlist = ["character","core","power","inventory","options"];
 
+        buttonlist.forEach(button => {
 
+            on(`clicked:${button}`, function() {
 
+                    setAttrs({
+                        sheetTab: button
+                    });
+
+            });
+
+        });
     </script>
+
+</div>
+
 
