@@ -208,14 +208,14 @@
       "attribute": "cd_bar1_v",
       "displayname": "Bar 1 Value:",
       "type": "text",
-      "default": "hp_max",
+      "default": "maxhp",
       "description": "On Default Tokens created by doing a Compendium drop onto the virtual table top, set the Bar 1's value to this attribute."
     },
     {
       "attribute": "cd_bar1_m",
       "displayname": "Bar 1 Max:",
       "type": "text",
-      "default": "hp_max",
+      "default": "maxhp",
       "description": "On Default Tokens created by doing a Compendium drop onto the virtual table top, set the Bar 1's max to this attribute."
     },
     {

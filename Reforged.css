@@ -1,10 +1,16 @@
 
+@import url('https://fonts.googleapis.com/css?family=Share+Tech&display=swap');
+
 /* ----- Constant Variables ----- */
 :root {
     --CBase: #414042;
+    --CRed: #da5b70;
+    --CGrey: #313031;
+    --CBlue: #4ea5c0;
+    --CGreen: #77b05f;
+    --CYellow: #e9a355;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Share+Tech&display=swap');
 
 /* ----- Page Parameters ----- */
 .charsheet {
@@ -13,13 +19,13 @@
     height: 470px;
     margin: -10px -10px -10px -10px;
     overflow: hidden;
-    background-color: var(--CBackground);
-    font-family: 'Share Tech', serif;
+    background-color: none;
+    font-family: 'Share Tech', sans-serif;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-    .charsheet .sheet-sidebar {
+    .charsheet .sidebar {
         z-index: 10;
         border-radius: 10px;
         background-color: var(--CBase);
@@ -32,11 +38,11 @@
         grid-gap: 20px;
     }
 
-        .charsheet .sheet-sidebar:hover ~ sidebarDrop {
+        .charsheet .sidebar:hover ~ sidebarDrop {
             transform: translateX(0px);
         }
 
-        .charsheet .sheet-sidebar .sheet-sidebar-button {
+        .charsheet .sidebar .sidebar-button {
             z-index: 11;
             transform: translate(10px, 10px);
             border-radius: 5px;
@@ -46,14 +52,14 @@
             cursor: pointer;
             overflow: hidden;
         }
-            .charsheet .sheet-sidebar .sheet-sidebar-button:hover {
+            .charsheet .sidebar .sidebar-button:hover {
                 filter: brightness(115%);
             }
-            .charsheet .sheet-sidebar .sheet-sidebar-button:active {
+            .charsheet .sidebar .sidebar-button:active {
                 filter: brightness(95%);
             }
 
-            .charsheet .sheet-sidebar .sheet-sidebar-button img {
+            .charsheet .sidebar .sidebar-button img {
                 width: 55%;
                 position: absolute;
                 top: 50%;
@@ -63,7 +69,7 @@
             }
 
 
-        .charsheet .sheet-sidebar .sheet-sidebar-line {
+        .charsheet .sidebar .sidebar-line {
             transform: translate(20px, 8px);
             z-index: 11;
             border-radius: 2px;
@@ -75,7 +81,7 @@
 
 
      /* ----- PAGE CONTENTS ----- */
-    .charsheet .sheet-content {
+    .charsheet .content {
         z-index: 1;
         margin: 10px 0px 0px 90px;
         position: absolute;
@@ -85,7 +91,7 @@
     }
 
         /* ----- CHARACTER ----- */
-        .charsheet .sheet-content .sheet-content-box-character {
+        .charsheet .content .content-box-character {
             margin-left: 30px;
             width: 710px;
             height: 450px;
@@ -101,7 +107,7 @@
         }
 
         /* ----- CORE ----- */
-        .charsheet .sheet-content .sheet-content-box-core {
+        .charsheet .content .content-box-core {
             margin-left: 30px;
             margin-top: -450px;
             width: 710px;
@@ -116,7 +122,7 @@
             transition-delay: 0.15s;
         }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockTop {
+            .charsheet .content .content-box-core .content-box-core-statblockTop {
                 width: 80px;
                 height: 90px;
                 background-color: var(--CBase);
@@ -124,15 +130,15 @@
                 text-align: center;
                 cursor: pointer;
             }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockTop:hover {
+                .charsheet .content .content-box-core .content-box-core-statblockTop:hover {
                     filter: brightness(110%);
                 }
 
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockTop:active {
+                .charsheet .content .content-box-core .content-box-core-statblockTop:active {
                     filter: brightness(90%);
                 }
 
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockTop label {
+                .charsheet .content .content-box-core .content-box-core-statblockTop label {
                     text-align: center;
                     color: var(--CBase);
                     filter: brightness(225%);
@@ -142,7 +148,7 @@
                     cursor: pointer;
                 }
 
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockTop span {
+                .charsheet .content .content-box-core .content-box-core-statblockTop span {
                     text-align: center;
                     color: var(--CBase);
                     filter: brightness(250%);
@@ -152,7 +158,7 @@
                     cursor: pointer;
                 }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockLeft {
+            .charsheet .content .content-box-core .content-box-core-statblockLeft {
                 width: 40px;
                 height: 30px;
                 background-color: var(--CBase);
@@ -160,7 +166,7 @@
                 text-align: center;
                 overflow: hidden;
             }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockLeft input {
+                .charsheet .content .content-box-core .content-box-core-statblockLeft input {
                     text-align: center;
                     height: 32px;
                     margin-top: -1px;
@@ -173,13 +179,13 @@
                     background: none;
                 }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockRight {
+            .charsheet .content .content-box-core .content-box-core-statblockRight {
                 width: 30px;
                 height: 30px;
                 background-color: var(--CBase);
                 border-radius: 5px 5px 10px 5px;
             }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockRight .sheet-content-box-core-statblockRight-box {
+                .charsheet .content .content-box-core .content-box-core-statblockRight .content-box-core-statblockRight-box {
                     height: 20px;
                     width: 20px;
                     text-align: center;
@@ -189,7 +195,7 @@
                     transform: translateX(5px) translateY(5px);
                     overflow: hidden;
                 }
-                    .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockRight .sheet-content-box-core-statblockRight-box input[type="checkbox"] {
+                    .charsheet .content .content-box-core .content-box-core-statblockRight .content-box-core-statblockRight-box input[type="checkbox"] {
                         -webkit-appearance: none;
                         -moz-appearance: none;
                         height: 30px;
@@ -200,32 +206,86 @@
                         margin-top: -5px;
                         margin-left: -5px;
                     }
-                        .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-statblockRight .sheet-content-box-core-statblockRight-box input[type="checkbox"]:checked {
+                        .charsheet .content .content-box-core .content-box-core-statblockRight .content-box-core-statblockRight-box input[type="checkbox"]:checked {
                             filter: brightness(150%);
-                        }  
+                        }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-health {
+            .charsheet .content .content-box-core .content-box-core-bar {
                 width: 290px;
                 height: 40px;
                 background-color: var(--CBase);
                 border-radius: 10px;
+                overflow: visible;
+                text-align: center;
             }
+                .charsheet .content .content-box-core .content-box-core-bar .content-box-core-bar-box {
+                    height: 30px;
+                    width: 40px;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(10px) translateY(5px);
+                    overflow: hidden;
+                }
+                    .charsheet .content .content-box-core .content-box-core-bar .content-box-core-bar-box input {
+                        text-align: center;
+                        height: 33px;
+                        width: 70px;
+                        margin-left: -7px;
+                        margin-top: -1px;
+                        color: var(--CBase);
+                        filter: brightness(250%);
+                        font-size: 25px;
+                        font-weight: 700;
+                        border: none;
+                        background: none;
+                    }
+                .charsheet .content .content-box-core .content-box-core-bar .content-box-core-bar-track {
+                    background-color: var(--CGrey); /* Grey */
+                    width: 170px;
+                    height: 20px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-top: -20px;
+                    margin-left: 60px;
+                }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-mana {
-                width: 180px;
-                height: 40px;
-                background-color: var(--CBase);
-                border-radius: 10px;
-            }
-
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-square {
+            .charsheet .content .content-box-core .content-box-core-square {
                 width: 80px;
                 height: 80px;
                 background-color: var(--CBase);
                 border-radius: 10px;
+                cursor: pointer;
+                text-align: center;
             }
+                .charsheet .content .content-box-core .content-box-core-square:hover {
+                    filter: brightness(110%);
+                }
+                .charsheet .content .content-box-core .content-box-core-square:active {
+                    filter: brightness(90%);
+                }
+                .charsheet .content .content-box-core .content-box-core-square label {
+                    text-align: center;
+                    color: var(--CBase);
+                    filter: brightness(225%);
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-top: 50px;
+                }
+                .charsheet .content .content-box-core .content-box-core-square span {
+                    color: var(--CBase);
+                    filter: brightness(250%);
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 45px;
+                    cursor: pointer;
+                    position: absolute;
+                    margin-top: 10px;
+                    margin-left: -7.5px;
+                }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-rest {
+            .charsheet .content .content-box-core .content-box-core-rest {
                 width: 150px;
                 height: 40px;
                 background-color: var(--CBase);
@@ -234,13 +294,13 @@
                 border: none;
                 cursor: pointer;
             }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-rest:hover {
+                .charsheet .content .content-box-core .content-box-core-rest:hover {
                     filter: brightness(140%);
                 }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-rest:active {
+                .charsheet .content .content-box-core .content-box-core-rest:active {
                     filter: brightness(120%);
                 }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-rest label {
+                .charsheet .content .content-box-core .content-box-core-rest label {
                     text-align: center;
                     color: var(--CBase);
                     filter: brightness(160%);
@@ -250,27 +310,27 @@
                     cursor: pointer;
                 }
 
-            .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill {
+            .charsheet .content .content-box-core .content-box-core-skill {
                 width: 150px;
                 height: 30px;
                 background-color: var(--CBase);
                 border-radius: 5px;
                 cursor: pointer;
             }
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-button {
+                .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-button {
                     width: 150px;
                     height: 30px;
                     background-color: var(--CBase);
                     border-radius: 5px;
                     margin-top: 0px;
                 }
-                    .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-button:hover {
+                    .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-button:hover {
                         filter: brightness(110%);
                     }
-                    .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-button:active {
+                    .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-button:active {
                         filter: brightness(90%);
                     }
-                    .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-button label {
+                    .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-button label {
                         text-align: left;
                         color: var(--CBase);
                         filter: brightness(200%);
@@ -281,7 +341,7 @@
                         padding-top: 7px;
                     }
 
-                .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-box {
+                .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-box {
                     height: 20px;
                     width: 20px;
                     text-align: center;
@@ -292,7 +352,7 @@
                     overflow: hidden;
                     margin-top: -30px;
                 }
-                    .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-box input[type="checkbox"] {
+                    .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-box input[type="checkbox"] {
                         -webkit-appearance: none;
                         -moz-appearance: none;
                         height: 30px;
@@ -303,13 +363,13 @@
                         margin-top: -5px;
                         margin-left: -5px;
                     }
-                        .charsheet .sheet-content .sheet-content-box-core .sheet-content-box-core-skill .sheet-content-box-core-skill-box input[type="checkbox"]:checked {
+                        .charsheet .content .content-box-core .content-box-core-skill .content-box-core-skill-box input[type="checkbox"]:checked {
                             filter: brightness(150%);
                         }  
 
 
         /* ----- POWER ----- */
-        .charsheet .sheet-content .sheet-content-box-power {
+        .charsheet .content .content-box-power {
             margin-left: 30px;
             margin-top: -450px;
             width: 710px;
@@ -327,7 +387,7 @@
 
 
         /* ----- INVENTORY ----- */
-        .charsheet .sheet-content .sheet-content-box-inventory {
+        .charsheet .content .content-box-inventory {
             margin-left: 30px;
             margin-top: -450px;
             width: 710px;
@@ -345,7 +405,7 @@
 
 
         /* ----- OPTIONS ----- */
-        .charsheet .sheet-content .sheet-content-box-options {
+        .charsheet .content .content-box-options {
             margin-left: 30px;
             margin-top: -450px;
             width: 710px;
@@ -362,7 +422,7 @@
         }
 
 
-/* ----- TRANSITION SETUP ----- */
+/* ----- TAB TRANSITION SETUP ----- */
 @keyframes hideEffect {
     from {
         transform: translateX(0px);
@@ -381,11 +441,137 @@
         transform: translateX(0px);
     }
 }
-.charsheet .sheet-tabshow[value="character"] ~ .sheet-content .sheet-content-box-character,
-.charsheet .sheet-tabshow[value="core"] ~ .sheet-content .sheet-content-box-core,
-.charsheet .sheet-tabshow[value="power"] ~ .sheet-content .sheet-content-box-power,
-.charsheet .sheet-tabshow[value="inventory"] ~ .sheet-content .sheet-content-box-inventory,
-.charsheet .sheet-tabshow[value="options"] ~ .sheet-content .sheet-content-box-options {
+.charsheet .tabshow[value="character"] ~ .content .content-box-character,
+.charsheet .tabshow[value="core"] ~ .content .content-box-core,
+.charsheet .tabshow[value="power"] ~ .content .content-box-power,
+.charsheet .tabshow[value="inventory"] ~ .content .content-box-inventory,
+.charsheet .tabshow[value="options"] ~ .content .content-box-options {
     animation: showEffect 0.15s ease-in-out 0.15s;
     transform: translateX(0px);
 }
+
+
+
+
+.charsheet .healthbar-progress {
+    background-color: var(--CGreen);
+    width: 100%;
+    height: 20px;
+    transition: width 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.charsheet .manabar-progress {
+    background-color: var(--CBlue);
+    width: 50%;
+    height: 20px;
+    transition: width 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+/* ----- PROGRESS BAR STEPS ----- */
+.charsheet .healthpercent[value^="-"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value="0"] ~ div.healthbar-progress {
+    width: 0%;
+    background-color: var(--CRed);
+}
+.charsheet .healthpercent[value^="0."] ~ div.healthbar-progress,
+.charsheet .healthpercent[value="1"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="1."] ~ div.healthbar-progress {
+    background-color: var(--CRed);
+    width: 5%;
+}
+.charsheet .healthpercent[value="2"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="2."] ~ div.healthbar-progress {
+    background-color: var(--CRed);
+    width: 10%;
+}
+.charsheet .healthpercent[value="3"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="3."] ~ div.healthbar-progress {
+    background-color: var(--CRed);
+    width: 15%;
+}
+.charsheet .healthpercent[value="4"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="4."] ~ div.healthbar-progress {
+    background-color: var(--CRed);
+    width: 20%;
+}
+.charsheet .healthpercent[value="5"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="5."] ~ div.healthbar-progress {
+    background-color: var(--CRed);
+    width: 25%;
+}
+.charsheet .healthpercent[value="6"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="6."] ~ div.healthbar-progress {
+    background-color: var(--CYellow);
+    width: 30%;
+}
+.charsheet .healthpercent[value="7"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="7."] ~ div.healthbar-progress {
+    background-color: var(--CYellow);
+    width: 35%;
+}
+.charsheet .healthpercent[value="8"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="8."] ~ div.healthbar-progress {
+    background-color: var(--CYellow);
+    width: 40%;
+}
+.charsheet .healthpercent[value="9"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="9."] ~ div.healthbar-progress {
+    background-color: var(--CYellow);
+    width: 45%;
+}
+.charsheet .healthpercent[value="10"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="10."] ~ div.healthbar-progress {
+    background-color: var(--CYellow);
+    width: 50%;
+}
+.charsheet .healthpercent[value="11"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="11."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 55%;
+}
+.charsheet .healthpercent[value="12"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="12."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 60%;
+}
+.charsheet .healthpercent[value="13"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="13."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 65%;
+}
+.charsheet .healthpercent[value="14"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="14."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 70%;
+}
+.charsheet .healthpercent[value="15"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="15."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 75%;
+}
+.charsheet .healthpercent[value="16"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="16."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 80%;
+}
+.charsheet .healthpercent[value="17"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="17."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 85%;
+}
+.charsheet .healthpercent[value="18"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="18."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 90%;
+}
+.charsheet .healthpercent[value="19"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="19."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 95%;
+}
+.charsheet .healthpercent[value="20"] ~ div.healthbar-progress,
+.charsheet .healthpercent[value^="20."] ~ div.healthbar-progress {
+    background-color: var(--CGreen);
+    width: 100%;
+}
+
