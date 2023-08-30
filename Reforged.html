@@ -23,6 +23,10 @@
             <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-items.svg" />
         </button>
 
+        <button type="action" class="tab" name="act_options" style="grid-area: a5;">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-options.svg" />
+        </button>
+
     </div>
 
     <div class="content">
@@ -37,137 +41,148 @@
         <!-- Core -->
         <div class="core" id="Core">
 
+
+            <!-- HEALTHBAR -->
+            <!-- Health -->
+            <div class="inputblock" style="grid-column-start:1; grid-row-start:1;">
+                <input type="hidden" title="@{hp_max}" name="attr_hp_max" value="100" />
+                <input name="attr_hp" title="@{hp}" contenteditable="true" type="number" value="100">
+            </div>
+
+            <div class="resourcebar" style="grid-column-start:6; grid-row-start:1;">
+                <input type="hidden" class="health-value" name="attr_health_value" value="20" />
+                <div class="healthbar"></div>
+            </div>
+
+            <div class="standalonevalue" style="grid-column-start:27; grid-row-start:1;">
+                <input name="attr_hp_temp" title="@{hp_temp}" contenteditable="true" type="number" value="0">
+            </div>
+            
+            
+            
+            <!-- REST BUTTONS -->
+            <!-- Short Rest -->
+            <div class="longbutton" id="Short_Rest" style="grid-column-start: 1; grid-row-start: 5;">
+                <label>Short Rest</label>
+            </div>
+
+            <!-- Long Rest-->
+            <div class="longbutton" id="Long_Rest" style="grid-column-start: 16; grid-row-start: 5;">
+                <label>Long Rest</label>
+            </div>
+
+
+
             <!-- STATS-->
             <!-- Strength -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:1;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:10;">
                 <input type="checkbox" name="attr_strength_prof" title="@{strength_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:1;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:10;">
                 <label>Strength</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:1;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:10;">
                 <span type="number" name="attr_strength_mod" title="@{strength_mod}">0</span>
             </div>
 
 
             <!-- Dexterity -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:5;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:14;">
                 <input type="checkbox" name="attr_dexterity_prof" title="@{dexterity_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:5;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:14;">
                 <label>Dexterity</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:5;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:14;">
                 <span type="number" name="attr_dexterity_mod" title="@{dexterity_mod}">0</span>
             </div>
 
             
             <!-- Constitution -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:9;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:18;">
                 <input type="checkbox" name="attr_constitution_prof" title="@{constitution_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:9;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:18;">
                 <label>Constitution</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:9;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:18;">
                 <span type="number" name="attr_constitution_mod" title="@{constitution_mod}">0</span>
             </div>
 
 
             <!-- Intelligence -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:13;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:22;">
                 <input type="checkbox" name="attr_intelligence_prof" title="@{intelligence_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:13;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:22;">
                 <label>Intelligence</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:13;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:22;">
                 <span type="number" name="attr_intelligence_mod" title="@{intelligence_mod}">0</span>
             </div>
 
 
             <!-- Wisdom -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:17;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:26;">
                 <input type="checkbox" name="attr_wisdom_prof" title="@{wisdom_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:17;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:26;">
                 <label>Wisdom</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:17;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:26;">
                 <span type="number" name="attr_wisdom_mod" title="@{wisdom_mod}">0</span>
             </div>
 
 
             <!-- Charisma -->
-            <div class="proficientbox" style="grid-column-start:1; grid-row-start:21;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:30;">
                 <input type="checkbox" name="attr_charisma_prof" title="@{charisma_prof}">
             </div>
             
-            <div class="statblock" style="grid-column-start:3; grid-row-start:21;">
+            <div class="statblock" style="grid-column-start:3; grid-row-start:30;">
                 <label>Charisma</label>
             </div>
 
-            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:21;">
+            <div class="standalonevalue" style="grid-column-start:17; grid-row-start:30;">
                 <span type="number" name="attr_charisma_mod" title="@{charisma_mod}">0</span>
             </div>
 
 
 
 
-            <!-- HEALTHBAR -->
-            <!-- Health -->
-            <div class="inputblock" style="grid-column-start:22; grid-row-start:1;">
-                <input type="hidden" title="@{hp_max}" name="attr_hp_max" value="100" />
-                <input name="attr_hp" title="@{hp}" contenteditable="true" type="number" value="100">
-            </div>
-
-            <div class="resourcebar" style="width: 120px; grid-column-start:27; grid-row-start:1;">
-                <input type="hidden" class="health-value" name="attr_health_value" value="20" />
-                <div class="healthbar"></div>
-            </div>
-
-            <div class="standalonevalue" style="grid-column-start:40; grid-row-start:1;">
-                <input name="attr_hp_temp" title="@{hp_temp}" contenteditable="true" type="number" value="0">
-            </div>
-            
-            
-
-
-
             <!-- VALUES -->
 
             <!-- Armor -->
-            <div class="statbox" id="Armor" style="width: 60px; grid-column-start: 22; grid-row-start: 5;">
+            <div class="statbox" id="Armor" style="grid-column-start: 23; grid-row-start: 10;">
                 <span type="number" name="attr_ac" title="@{ac}">0</span>
                 <label>Armor</label>
             </div>
 
-            <!-- Awareness -->
-            <div class="statbox" id="Awareness" style="grid-column-start: 29; grid-row-start: 5;">
-                <span type="number" name="attr_awareness" title="@{awareness}">0</span>
-                <label>Awareness</label>
-            </div>
-
             <!-- Speed -->
-            <div class="statbox" id="Speed" style="width: 60px; grid-column-start: 37; grid-row-start: 5;">
+            <div class="statbox" id="Speed" style="grid-column-start: 23; grid-row-start: 18;">
                 <span type="number" name="attr_speed" title="@{speed}">0</span>
                 <label>Speed</label>
             </div>
 
+            <!-- Awareness -->
+            <div class="statbox" id="Awareness" style="grid-column-start: 23; grid-row-start: 26;">
+                <span type="number" name="attr_awareness" title="@{awareness}">0</span>
+                <label>Awareness</label>
+            </div>
 
 
             <!-- Proficiency -->
-            <div class="statbox" id="Proficiency" style="filter: brightness(75%); grid-column-start: 22; grid-row-start: 18;">
+            <div class="statbox" id="Proficiency" style="height: 60px; width: 90px; filter: brightness(75%); grid-column-start: 1; grid-row-start: 35;">
                 <select name="attr_proficiency">
                     <option value="12">2</option>
                     <option value="10">3</option>
@@ -177,22 +192,17 @@
                 </select>
                 <label>Proficiency</label>
             </div>
-            
-            <!-- Heal -->
-            <div class="statbox" id="Proficiency" style="filter: brightness(75%); width: 50px; grid-column-start: 30; grid-row-start: 18;">
-                <select name="attr_hitdieroll">
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="8">8</option>
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="20">20</option>
-                </select>
-                <label>Heal</label>
+
+            <!-- Inspiration -->
+            <div class="statbox" id="Inspiration" style="height: 60px; width: 90px; filter: brightness(75%); grid-column-start: 11; grid-row-start: 35;">
+                <div class="inputbox">
+                    <input type="number" name="attr_inspiration" title="@{inspiration}" />
+                </div>
+                <label>Inspiration</label>
             </div>
 
             <!-- Inspiration -->
-            <div class="statbox" id="Inspiration" style="filter: brightness(75%); grid-column-start: 36; grid-row-start: 18;">
+            <div class="statbox" id="Inspiration" style="height: 60px; width: 90px; filter: brightness(75%); grid-column-start: 21; grid-row-start: 35;">
                 <div class="inputbox">
                     <input type="number" name="attr_inspiration" title="@{inspiration}" />
                 </div>
@@ -200,129 +210,113 @@
             </div>
 
 
-            
-            
-            
-            <!-- REST BUTTONS -->
-            <!-- Short Rest -->
-            <div class="longbutton" id="Short_Rest" style="width: 100px; grid-column-start: 22; grid-row-start: 13;">
-                <label>Short Rest</label>
-            </div>
-
-            <!-- Long Rest-->
-            <div class="longbutton" id="Long_Rest" style="width: 100px; grid-column-start: 33; grid-row-start: 13;">
-                <label>Long Rest</label>
-            </div>
-
-
-
 
 
             <!-- SKILL CHECKS -->
             <!-- Agility -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:1;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:43;">
                 <input type="checkbox" name="attr_agility_prof" title="@{agility_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:1;">
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:43;">
                 <label>Agility</label>
             </div>
 
 
             <!-- Arcana -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:1;">
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:43;">
                 <input type="checkbox" name="attr_arcana_prof" title="@{arcana_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:1;">
+            <div class="statblock" style="width: 120px; grid-column-start:18; grid-row-start:43;">
                 <label>Arcana</label>
             </div>
 
 
-            <!-- Divine -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:5;">
-                <input type="checkbox" name="attr_divine_prof" title="@{divine_prof}">
+            <!-- Crafting -->
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:47;">
+                <input type="checkbox" name="attr_crafting_prof" title="@{crafting_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:5;">
-                <label>Divine</label>
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:47;">
+                <label>Crafting</label>
             </div>
 
 
-            <!-- Expertise -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:5;">
-                <input type="checkbox" name="attr_expertise_prof" title="@{expertise_prof}">
+            <!-- Divinity -->
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:47;">
+                <input type="checkbox" name="attr_divinity_prof" title="@{divinity_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:5;">
-                <label>Expertise</label>
+            <div class="statblock"  style="width: 120px; grid-column-start:18; grid-row-start:47;">
+                <label>Divinity</label>
             </div>
 
 
             <!-- History -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:9;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:51;">
                 <input type="checkbox" name="attr_history_prof" title="@{history_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:9;">
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:51;">
                 <label>History</label>
             </div>
 
 
             <!-- Intimidation -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:9;">
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:51;">
                 <input type="checkbox" name="attr_intimidation_prof" title="@{intimidation_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:9;">
+            <div class="statblock" style="width: 120px; grid-column-start:18; grid-row-start:51;">
                 <label>Intimidation</label>
             </div>
 
 
             <!-- Intuition -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:13;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:55;">
                 <input type="checkbox" name="attr_intuition_prof" title="@{intuition_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:13;">
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:55;">
                 <label>Intuition</label>
             </div>
 
 
             <!-- Investigation -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:13;">
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:55;">
                 <input type="checkbox" name="attr_investigation_prof" title="@{investigation_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:13;">
+            <div class="statblock" style="width: 120px; grid-column-start:18; grid-row-start:55;">
                 <label>Investigation</label>
             </div>
 
 
-            <!-- Medicine -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:17;">
-                <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}">
+            <!-- Healing -->
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:59;">
+                <input type="checkbox" name="attr_healing_prof" title="@{healing_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:17;">
-                <label>Medicine</label>
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:59;">
+                <label>Healing</label>
             </div>
 
 
             <!-- Nature -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:17;">
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:59;">
                 <input type="checkbox" name="attr_nature_prof" title="@{nature_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:17;">
+            <div class="statblock" style="width: 120px; grid-column-start:18; grid-row-start:59;">
                 <label>Nature</label>
             </div>
 
 
             <!-- Performance -->
-            <div class="proficientbox" style="grid-column-start:46; grid-row-start:21;">
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:63;">
                 <input type="checkbox" name="attr_performance_prof" title="@{performance_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:48; grid-row-start:21;">
+            <div class="statblock" style="width: 120px; grid-column-start:3; grid-row-start:63;">
                 <label>Performance</label>
             </div>
 
 
             <!-- Stealth -->
-            <div class="proficientbox" style="grid-column-start:61; grid-row-start:21;">
+            <div class="proficientbox" style="grid-column-start:16; grid-row-start:63;">
                 <input type="checkbox" name="attr_stealth_prof" title="@{stealth_prof}">
             </div>
-            <div class="statblock" style="grid-column-start:63; grid-row-start:21;">
+            <div class="statblock" style="width: 120px; grid-column-start:18; grid-row-start:63;">
                 <label>Stealth</label>
             </div>
 
