@@ -7,26 +7,20 @@
     <!-- Sidebar -->
     <div class="sidebar">
 
-        <button type="action" class="sidebar-button" name="act_character">
-            <img name="attr_character_avatar" style="width: 100%; height: 100%; filter: brightness(100%);" />
+        <button type="action" class="tab" name="act_character">
+            <img name="attr_character_avatar" style="width: 100%; height: 100%; filter: brightness(100%); grid-area: a1;" />
         </button>
 
-        <div class="sidebar-line"></div>
-
-        <button type="action" class="sidebar-button" name="act_core">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-core.svg" class="tabs-img" />
+        <button type="action" class="tab" name="act_core" style="grid-area: a2;">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-core.svg"  />
         </button>
 
-        <button type="action" class="sidebar-button" name="act_power">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-power.svg" class="tabs-img" />
+        <button type="action" class="tab" name="act_power" style="grid-area: a3;">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-power.svg"  />
         </button>
 
-        <button type="action" class="sidebar-button" name="act_inventory">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-items.svg" class="tabs-img" />
-        </button>
-
-        <button type="action" class="sidebar-button" name="act_options">
-            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-options.svg" class="tabs-img" />
+        <button type="action" class="tab" name="act_inventory" style="grid-area: a4;">
+            <img src="https://github.com/MChapeland/ParchmentCS/raw/main/img/common/tabs-items.svg" />
         </button>
 
     </div>
@@ -34,429 +28,556 @@
     <div class="content">
 
         <!-- Character -->
-        <div class="content-box-character" id="Character">
+        <div class="character" id="Character">
 
         </div>
 
 
 
         <!-- Core -->
-        <div class="content-box-core" id="Core">
+        <div class="core" id="Core">
 
             <!-- STATS-->
             <!-- Strength -->
-            <div class="content-box-core-statblockTop" id="Strength_Top" style="grid-column-start:1; grid-row-start:1;">
-                <label>Str</label>
-                <span type="number" name="attr_str_mod" title="@{str_mod}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:1;">
+                <input type="checkbox" name="attr_strength_prof" title="@{strength_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:1;">
+                <label>Strength</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Strength_Left" style="grid-column-start:1; grid-row-start:11;">
-                <input contenteditable="true" type="number" name="attr_str" title="@{str}" value="10">
-            </div>
-
-            <div class="content-box-core-statblockRight" id="Strength_Right" style="grid-column-start:6; grid-row-start:11;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_str_prof" title="@{str_prof}">
-                </div>
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:1;">
+                <span type="number" name="attr_strength_mod" title="@{strength_mod}">0</span>
             </div>
 
 
             <!-- Dexterity -->
-            <div class="content-box-core-statblockTop" id="Dexterity_Top" style="grid-column-start:1; grid-row-start:17;">
-                <label>Dex</label>
-                <span type="number" name="attr_dex_mod" title="@{dex_mod}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:5;">
+                <input type="checkbox" name="attr_dexterity_prof" title="@{dexterity_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:5;">
+                <label>Dexterity</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Dexterity_Left" style="grid-column-start:1; grid-row-start:27;">
-                <input contenteditable="true" type="number" name="attr_dex" title="@{dex}" value="10">
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:5;">
+                <span type="number" name="attr_dexterity_mod" title="@{dexterity_mod}">0</span>
             </div>
 
-            <div class="content-box-core-statblockRight" id="Dexterity_Right" style="grid-column-start:6; grid-row-start:27;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_dex_prof" title="@{dex_prof}">
-                </div>
-            </div>
-
-
+            
             <!-- Constitution -->
-            <div class="content-box-core-statblockTop" id="Constitution_Top" style="grid-column-start:1; grid-row-start:33;">
-                <label>Con</label>
-                <span type="number" name="attr_con_mod" title="@{con_mod}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:9;">
+                <input type="checkbox" name="attr_constitution_prof" title="@{constitution_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:9;">
+                <label>Constitution</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Constitution_Left" style="grid-column-start:1; grid-row-start:43;">
-                <input contenteditable="true" type="number" name="attr_con" title="@{con}" value="10">
-            </div>
-
-            <div class="content-box-core-statblockRight" id="Constitution_Right" style="grid-column-start:6; grid-row-start:43;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_con_prof" title="@{con_prof}">
-                </div>
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:9;">
+                <span type="number" name="attr_constitution_mod" title="@{constitution_mod}">0</span>
             </div>
 
 
             <!-- Intelligence -->
-            <div class="content-box-core-statblockTop" id="Intelligence_Top" style="grid-column-start:12; grid-row-start:1;">
-                <label>Int</label>
-                <span type="number" name="attr_int_mod" title="@{str_int}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:13;">
+                <input type="checkbox" name="attr_intelligence_prof" title="@{intelligence_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:13;">
+                <label>Intelligence</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Intelligence_Left" style="grid-column-start:12; grid-row-start:11;">
-                <input contenteditable="true" type="number" name="attr_int" title="@{int}" value="10">
-            </div>
-
-            <div class="content-box-core-statblockRight" id="Intelligence_Right" style="grid-column-start:17; grid-row-start:11;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_int_prof" title="@{int_prof}">
-                </div>
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:13;">
+                <span type="number" name="attr_intelligence_mod" title="@{intelligence_mod}">0</span>
             </div>
 
 
             <!-- Wisdom -->
-            <div class="content-box-core-statblockTop" id="Wisdom_Top" style="grid-column-start:12; grid-row-start:17;">
-                <label>Wis</label>
-                <span type="number" name="attr_wis_mod" title="@{wis_mod}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:17;">
+                <input type="checkbox" name="attr_wisdom_prof" title="@{wisdom_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:17;">
+                <label>Wisdom</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Wisdom_Left" style="grid-column-start:12; grid-row-start:27;">
-                <input contenteditable="true" type="number" name="attr_wis" title="@{wis}" value="10">
-            </div>
-
-            <div class="content-box-core-statblockRight" id="Wisdom_Right" style="grid-column-start:17; grid-row-start:27;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_wis_prof" title="@{wis_prof}">
-                </div>
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:17;">
+                <span type="number" name="attr_wisdom_mod" title="@{wisdom_mod}">0</span>
             </div>
 
 
             <!-- Charisma -->
-            <div class="content-box-core-statblockTop" id="Charisma_Top" style="grid-column-start:12; grid-row-start:33;">
-                <label>Cha</label>
-                <span type="number" name="attr_cha_mod" title="@{cha_mod}">0</span>
+            <div class="proficientbox" style="grid-column-start:1; grid-row-start:21;">
+                <input type="checkbox" name="attr_charisma_prof" title="@{charisma_prof}">
+            </div>
+            
+            <div class="statblock" style="grid-column-start:3; grid-row-start:21;">
+                <label>Charisma</label>
             </div>
 
-            <div class="content-box-core-statblockLeft" id="Charisma_Left" style="grid-column-start:12; grid-row-start:43;">
-                <input contenteditable="true" type="number" name="attr_cha" title="@{cha}" value="10">
-            </div>
-
-            <div class="content-box-core-statblockRight" id="Charisma_Right" style="grid-column-start:17; grid-row-start:43;">
-                <div class="content-box-core-statblockRight-box">
-                    <input type="checkbox" name="attr_cha_prof" title="@{cha_prof}">
-                </div>
+            <div class="standalonevalue" style="grid-column-start:16; grid-row-start:21;">
+                <span type="number" name="attr_charisma_mod" title="@{charisma_mod}">0</span>
             </div>
 
 
+
+
+            <!-- HEALTHBAR -->
+            <!-- Health -->
+            <div class="inputblock" style="grid-column-start:22; grid-row-start:1;">
+                <input type="hidden" title="@{hp_max}" name="attr_hp_max" value="100" />
+                <input name="attr_hp" title="@{hp}" contenteditable="true" type="number" value="100">
+            </div>
+
+            <div class="resourcebar" style="width: 120px; grid-column-start:27; grid-row-start:1;">
+                <input type="hidden" class="health-value" name="attr_health_value" value="20" />
+                <div class="healthbar"></div>
+            </div>
+
+            <div class="standalonevalue" style="grid-column-start:40; grid-row-start:1;">
+                <input name="attr_hp_temp" title="@{hp_temp}" contenteditable="true" type="number" value="0">
+            </div>
+            
+            
 
 
 
             <!-- VALUES -->
-            <!-- Health -->
-            <div class="content-box-core-bar" id="Health" style="grid-column-start:23; grid-row-start:1;">
-                <div class="content-box-core-bar-box">
-                    <input type="hidden" title="@{hp_max}" name="attr_hp_max" value="100" />
-                    <input name="attr_hp" title="@{hp}" contenteditable="true" type="number" value="100">
-                </div>
-                <div class="content-box-core-bar-track">
-                    <input type="hidden" class="healthpercent" name="attr_healthPercent" value="20" />
-                    <div class="healthbar-progress"></div>
-                </div>
-            </div>
-
-
-            <!-- Mana -->
-            <div class="content-box-core-bar" id="Mana" style="width: 180px !important; grid-column-start:54; grid-row-start:1;">
-                <div class="content-box-core-bar-box">
-                    <input contenteditable="true" type="number" step="1" value="0">
-                </div>
-                <div class="content-box-core-bar-track" style="width: 110px !important;">
-                    <div class="manabar-progress"></div>
-                </div>
-            </div>
-
-
-            <!-- Heal -->
-            <div class="content-box-core-square" id="Heal" style="width: 90px; grid-column-start: 23; grid-row-start: 7; background: url(https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-heart.svg); ">
-                <span type="number">0</span>
-                <label>Heal</label>
-            </div>
-
 
             <!-- Armor -->
-            <div class="content-box-core-square" id="Armor" style="grid-column-start: 34; grid-row-start: 7; background: url(https://github.com/MChapeland/ParchmentCS/raw/main/img/core/core-armor.svg); ">
-                <span type="number">0</span>
+            <div class="statbox" id="Armor" style="width: 60px; grid-column-start: 22; grid-row-start: 5;">
+                <span type="number" name="attr_ac" title="@{ac}">0</span>
                 <label>Armor</label>
             </div>
 
+            <!-- Awareness -->
+            <div class="statbox" id="Awareness" style="grid-column-start: 29; grid-row-start: 5;">
+                <span type="number" name="attr_awareness" title="@{awareness}">0</span>
+                <label>Awareness</label>
+            </div>
 
             <!-- Speed -->
-            <div class="content-box-core-square" id="Speed" style="grid-column-start:44; grid-row-start:7; border-radius: 50px;">
-                <span type="number">0</span>
+            <div class="statbox" id="Speed" style="width: 60px; grid-column-start: 37; grid-row-start: 5;">
+                <span type="number" name="attr_speed" title="@{speed}">0</span>
                 <label>Speed</label>
             </div>
 
 
-            <!-- Awareness -->
-            <div class="content-box-core-square" id="Awareness" style="grid-column-start:54; grid-row-start:7;">
-                <span type="number">0</span>
-                <label style="margin-top: 57px !important;">Awareness</label>
-            </div>
-
 
             <!-- Proficiency -->
-            <div class="content-box-core-square" id="Proficiency" style="grid-column-start:64; grid-row-start:7;">
-                <span type="number">0</span>
-                <label style="margin-top: 57px !important;">Proficiency</label>
+            <div class="statbox" id="Proficiency" style="filter: brightness(75%); grid-column-start: 22; grid-row-start: 18;">
+                <select name="attr_proficiency">
+                    <option value="12">2</option>
+                    <option value="10">3</option>
+                    <option value="8">4</option>
+                    <option value="6">5</option>
+                    <option value="4">6</option>
+                </select>
+                <label>Proficiency</label>
+            </div>
+            
+            <!-- Heal -->
+            <div class="statbox" id="Proficiency" style="filter: brightness(75%); width: 50px; grid-column-start: 30; grid-row-start: 18;">
+                <select name="attr_hitdieroll">
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="20">20</option>
+                </select>
+                <label>Heal</label>
+            </div>
+
+            <!-- Inspiration -->
+            <div class="statbox" id="Inspiration" style="filter: brightness(75%); grid-column-start: 36; grid-row-start: 18;">
+                <div class="inputbox">
+                    <input type="number" name="attr_inspiration" title="@{inspiration}" />
+                </div>
+                <label>Inspiration</label>
             </div>
 
 
-
-
+            
+            
+            
             <!-- REST BUTTONS -->
-            <!-- New Turn -->
-            <div class="content-box-core-rest" id="New_Turn" style="grid-column-start: 23; grid-row-start: 17; border-radius: 15px 5px 5px 15px; ">
-                <label>New Turn</label>
-            </div>
-
-
             <!-- Short Rest -->
-            <div class="content-box-core-rest" id="Short_Rest" style="grid-column-start:40; grid-row-start:17;">
+            <div class="longbutton" id="Short_Rest" style="width: 100px; grid-column-start: 22; grid-row-start: 13;">
                 <label>Short Rest</label>
             </div>
 
-
-            <!-- Long Rest -->
-            <div class="content-box-core-rest" id="Long_Rest" style="grid-column-start: 57; grid-row-start: 17; border-radius: 5px 15px 15px 5px;">
+            <!-- Long Rest-->
+            <div class="longbutton" id="Long_Rest" style="width: 100px; grid-column-start: 33; grid-row-start: 13;">
                 <label>Long Rest</label>
             </div>
 
 
 
 
+
             <!-- SKILL CHECKS -->
-            <!-- Acrobatics -->
-            <div class="content-box-core-skill" id="Acrobatics" style="grid-column-start: 23; grid-row-start: 23; border-radius: 10px 5px 5px 5px;">
-                <div class="content-box-core-skill-button" style="border-radius: 10px 5px 5px 5px;">
-                    <label>Acrobatics</label>
-                </div>
-                <div class="content-box-core-skill-box" style="border-radius: 6.5px 2.5px 2.5px 2.5px;">
-                    <input type="checkbox">
-                </div>
-
+            <!-- Agility -->
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:1;">
+                <input type="checkbox" name="attr_agility_prof" title="@{agility_prof}">
             </div>
-
-
-            <!-- Animal Handling -->
-            <div class="content-box-core-skill" id="Animal_Handling" style="grid-column-start: 23; grid-row-start: 27;">
-                <div class="content-box-core-skill-button">
-                    <label>Animal Handling</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:1;">
+                <label>Agility</label>
             </div>
 
 
             <!-- Arcana -->
-            <div class="content-box-core-skill" id="Arcana" style="grid-column-start: 23; grid-row-start: 31;">
-                <div class="content-box-core-skill-button">
-                    <label>Arcana</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:1;">
+                <input type="checkbox" name="attr_arcana_prof" title="@{arcana_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:1;">
+                <label>Arcana</label>
             </div>
 
 
-            <!-- Athletics -->
-            <div class="content-box-core-skill" id="Athletics" style="grid-column-start: 23; grid-row-start: 35;">
-                <div class="content-box-core-skill-button">
-                    <label>Athletics</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <!-- Divine -->
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:5;">
+                <input type="checkbox" name="attr_divine_prof" title="@{divine_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:5;">
+                <label>Divine</label>
             </div>
 
 
-            <!-- Deception -->
-            <div class="content-box-core-skill" id="Deception" style="grid-column-start: 23; grid-row-start: 39;">
-                <div class="content-box-core-skill-button">
-                    <label>Deception</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <!-- Expertise -->
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:5;">
+                <input type="checkbox" name="attr_expertise_prof" title="@{expertise_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:5;">
+                <label>Expertise</label>
             </div>
 
 
             <!-- History -->
-            <div class="content-box-core-skill" id="History" style="grid-column-start: 23; grid-row-start: 43; border-radius: 5px 5px 5px 10px;">
-                <div class="content-box-core-skill-button" style="border-radius: 5px 5px 5px 10px;">
-                    <label>History</label>
-                </div>
-                <div class="content-box-core-skill-box" style=" border-radius: 2.5px 2.5px 2.5px 6.5px;">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:9;">
+                <input type="checkbox" name="attr_history_prof" title="@{history_prof}">
             </div>
-
-
-            <!-- Insight -->
-            <div class="content-box-core-skill" id="Insight" style="grid-column-start: 40; grid-row-start: 23;">
-                <div class="content-box-core-skill-button">
-                    <label>Insight</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:9;">
+                <label>History</label>
             </div>
 
 
             <!-- Intimidation -->
-            <div class="content-box-core-skill" id="Intimidation" style="grid-column-start: 40; grid-row-start: 27;">
-                <div class="content-box-core-skill-button">
-                    <label>Intimidation</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:9;">
+                <input type="checkbox" name="attr_intimidation_prof" title="@{intimidation_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:9;">
+                <label>Intimidation</label>
+            </div>
+
+
+            <!-- Intuition -->
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:13;">
+                <input type="checkbox" name="attr_intuition_prof" title="@{intuition_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:13;">
+                <label>Intuition</label>
             </div>
 
 
             <!-- Investigation -->
-            <div class="content-box-core-skill" id="Investigation" style="grid-column-start: 40; grid-row-start: 31;">
-                <div class="content-box-core-skill-button">
-                    <label>Investigation</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:13;">
+                <input type="checkbox" name="attr_investigation_prof" title="@{investigation_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:13;">
+                <label>Investigation</label>
             </div>
 
 
             <!-- Medicine -->
-            <div class="content-box-core-skill" id="Medicine" style="grid-column-start: 40; grid-row-start: 35;">
-                <div class="content-box-core-skill-button">
-                    <label>Medicine</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:17;">
+                <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}">
+            </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:17;">
+                <label>Medicine</label>
             </div>
 
 
             <!-- Nature -->
-            <div class="content-box-core-skill" id="Nature" style="grid-column-start: 40; grid-row-start: 39;">
-                <div class="content-box-core-skill-button">
-                    <label>Nature</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:17;">
+                <input type="checkbox" name="attr_nature_prof" title="@{nature_prof}">
             </div>
-
-
-            <!-- Perception -->
-            <div class="content-box-core-skill" id="Perception" style="grid-column-start: 40; grid-row-start: 43;">
-                <div class="content-box-core-skill-button">
-                    <label>Perception</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:17;">
+                <label>Nature</label>
             </div>
 
 
             <!-- Performance -->
-            <div class="content-box-core-skill" id="Performance" style="grid-column-start: 57; grid-row-start: 23; border-radius: 5px 10px 5px 5px; ">
-                <div class="content-box-core-skill-button" style="border-radius: 5px 10px 5px 5px;">
-                    <label>Performance</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:46; grid-row-start:21;">
+                <input type="checkbox" name="attr_performance_prof" title="@{performance_prof}">
             </div>
-
-
-            <!-- Persuasion -->
-            <div class="content-box-core-skill" id="Persuasion" style="grid-column-start: 57; grid-row-start: 27;">
-                <div class="content-box-core-skill-button">
-                    <label>Persuasion</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-
-            <!-- Religion -->
-            <div class="content-box-core-skill" id="Religion" style="grid-column-start: 57; grid-row-start: 31;">
-                <div class="content-box-core-skill-button">
-                    <label>Religion</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
-            </div>
-
-
-            <!-- Sleight of Hand -->
-            <div class="content-box-core-skill" id="Sleight_Of_Hand" style="grid-column-start: 57; grid-row-start: 35;">
-                <div class="content-box-core-skill-button">
-                    <label>Sleight of Hand</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="statblock" style="grid-column-start:48; grid-row-start:21;">
+                <label>Performance</label>
             </div>
 
 
             <!-- Stealth -->
-            <div class="content-box-core-skill" id="Stealth" style="grid-column-start: 57; grid-row-start: 39;">
-                <div class="content-box-core-skill-button">
-                    <label>Stealth</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="proficientbox" style="grid-column-start:61; grid-row-start:21;">
+                <input type="checkbox" name="attr_stealth_prof" title="@{stealth_prof}">
             </div>
-
-
-            <!-- Survival -->
-            <div class="content-box-core-skill" id="Survival" style="grid-column-start: 57; grid-row-start: 43; border-radius: 5px 5px 10px 5px; ">
-                <div class="content-box-core-skill-button" style="border-radius: 5px 5px 10px 5px;">
-                    <label>Survival</label>
-                </div>
-                <div class="content-box-core-skill-box">
-                    <input type="checkbox">
-                </div>
+            <div class="statblock" style="grid-column-start:63; grid-row-start:21;">
+                <label>Stealth</label>
             </div>
-
-
 
         </div>
 
 
 
         <!-- Power -->
-        <div class="content-box-power" id="Power">
+        <div class="power" id="Power">
+
+
+            <!-- ATTACKS -->
+            <div class="longtag" style="width: 160px; grid-column-start:1; grid-row-start:1;">
+                <label style="text-align: left; margin: 7px 8px;">ATTACKS</label>
+            </div>
+            <div class="tinybutton" style="grid-column-start:17; grid-row-start:1;">
+                <label style="font-weight: 500;">¤</label>
+            </div>
+            <div class="tinybutton" style="grid-column-start:20; grid-row-start:1;">
+                <label>+</label>
+            </div>
+
+            <div class="scrollbox" style="grid-column-start:1; grid-row-start:5;">
+                
+                <div class="scrollattack">
+                    <div class="scrollmainvalue">
+                        <span>+3</span>
+                        <label>ATK</label>
+                    </div>
+                    <div class="scrolltitle">
+                        <label>Battleaxe</label>
+                        <span>1d8+6 Bludgeoning</span>
+                    </div>
+                </div>
+
+                
+                <div class="scrollattack">
+                    <div class="scrollmainvalue">
+                        <span>12</span>
+                        <label>DC</label>
+                    </div>
+                    <div class="scrolltitle">
+                        <label>Word of Radiance</label>
+                        <span>1d6 Fire (Radiant)</span>
+                    </div>
+                </div>
+
+                
+                <div class="scrollattack">
+                    <div class="scrollmainvalue">
+                        <span>+3</span>
+                        <label>ATK</label>
+                    </div>
+                    <div class="scrolltitle">
+                        <label>Trident</label>
+                        <span>1d6+1 Piercing</span>
+                    </div>
+                </div>
+
+                
+                <div class="scrollattack">
+                    <div class="scrollmainvalue">
+                        <span>13</span>
+                        <label>DC</label>
+                    </div>
+                    <div class="scrolltitle">
+                        <label>Acid Breath</label>
+                        <span>1d8 Acid</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- MANABAR -->
+            <!-- Mana -->
+            <div class="inputblock" style="grid-column-start:25; grid-row-start:1;">
+                <input type="hidden" title="@{mana_max}" name="attr_mana_max" value="20" />
+                <input name="attr_mana" title="@{mana}" contenteditable="true" type="number" value="20">
+            </div>
+
+            <div class="resourcebar" style="grid-column-start:30; grid-row-start:1;">
+                <input type="hidden" class="mana-value" name="attr_mana_value" value="20" />
+                <div class="manabar"></div>
+            </div>
+
+            <div class="standalonevalue" style="grid-column-start:45; grid-row-start:1;">
+                <input name="attr_sorcery_points" title="@{sorcery_points}" contenteditable="true" type="number" value="0">
+            </div>
+
+
+            <!-- VALUES -->
+            <!-- Spell DC -->
+            <div class="statbox" id="Spell_DC" style="width: 60px; grid-column-start: 25; grid-row-start: 5;">
+                <span type="number" name="attr_spell_dc" title="@{spell_dc}">0</span>
+                <label>Spell DC</label>
+            </div>
+
+
+            <!-- Spell Level -->
+            <div class="statbox" id="Spell_Level" style="width: 90px; grid-column-start: 32; grid-row-start: 5;">
+                <span type="number" name="attr_spell_lvl" title="@{spell_lvl}">0</span>
+                <label>Spell Level</label>
+            </div>
+
+            
+            <!-- Spell Modifier -->
+            <div class="statbox" id="Spell_Modifier" style="width: 60px; grid-column-start: 42; grid-row-start: 5;">
+                <span type="number" name="attr_spell_mod" title="@{spell_mod}">0</span>
+                <label>Modifier</label>
+                    <select name="attr_spellcasting_ability">
+                        <option value="0*">None</option>
+                        <option value="@{strength_mod}">Strength</option>
+                        <option value="@{dexterity_mod}">Dexterity</option>
+                        <option value="@{constitution_mod}">Constitution</option>
+                        <option value="@{intelligence_mod}">Intelligence</option>
+                        <option value="@{wisdom_mod}">Wisdom</option>
+                        <option value="@{charisma_mod}">Charisma</option>
+                    </select>
+            </div>
+
+
+            
+            <!-- Skill Training -->
+            <div class="longtag" style="width: 230px; grid-column-start:25; grid-row-start:13;">
+                <label>Training New Skills</label>
+            </div>
+
+            
+            <div class="inputtag" style="grid-column-start:25; grid-row-start:17;">
+                <input name="attr_training" title="@{training}" contenteditable="true" type="text" value="Skill">
+            </div>
+            <div class="standalonevalue" style="grid-column-start:45; grid-row-start:17;">
+                
+                <select name="attr_training_dice">
+                    <option value="20">20</option>
+                    <option value="12">12</option>
+                    <option value="10">10</option>
+                    <option value="8">8</option>
+                    <option value="6">6</option>
+                    <option value="4">4</option>
+                </select>
+
+            </div>
+
+
+            <div class="longtag" style="width: 90px; grid-column-start:25; grid-row-start:21;">
+                <label>Learned</label>
+            </div>
+            <div class="standalonevalue" style="grid-column-start:35; grid-row-start:21;">
+                <input name="attr_trained" title="@{trained}" contenteditable="true" type="number" value="0">
+            </div>
+
+            
+            <div class="longtag" style="width: 50px; grid-column-start:39; grid-row-start:21;">
+                <label>Max</label>
+            </div>
+            <div class="standalonevalue" style="grid-column-start:45; grid-row-start:21;">
+                <span name="attr_proficiency" title="@{proficiency}" type="number" value="0">
+            </div>
+
+
+
+
+
+
+            
+            <!-- ABILITIES -->
+            <div class="longtag" style="width: 190px; grid-column-start:50; grid-row-start:1;">
+                <label style="text-align: left; margin: 7px 8px;">ABILITIES</label>
+            </div>
+            <div class="tinybutton" style="grid-column-start:69; grid-row-start:1;">
+                <label style="font-weight: 500;">¤</label>
+            </div>
+            <div class="tinybutton" style="grid-column-start:72; grid-row-start:1;">
+                <label>+</label>
+            </div>
+
+            <div class="scrollbox" style="width: 250px; grid-column-start:50; grid-row-start:5;">
+
+                <div class="scrollability">
+                    <div class="scrolltitle">
+                        <label>Divine Smite</label>
+                        <span>Paladin Level 2</span>
+                    </div>
+                    <div class="scrollmainvalue">
+                        <span>2</span>
+                        <label>MAX 2</label>
+                    </div>
+                </div>
+                
+                <div class="scrollability">
+                    <div class="scrolltitle">
+                        <label>Acid Breath</label>
+                        <span>Copper Dragonborn</span>
+                    </div>
+                    <div class="scrollmainvalue">
+                        <span>1</span>
+                        <label>MAX 3</label>
+                    </div>
+                </div>
+
+                
+                <div class="scrollability">
+                    <div class="scrolltitle">
+                        <label>Acid Resistance</label>
+                        <span>Copper Dragonborn</span>
+                    </div>
+                </div>
+
+                <div class="scrollability">
+                    <div class="scrolltitle">
+                        <label>Divine Sense</label>
+                        <span>Paladin Level 2</span>
+                    </div>
+                    <div class="scrollmainvalue">
+                        <span>2</span>
+                        <label>MAX 2</label>
+                    </div>
+                </div>
+
+            </div>
+
 
         </div>
 
 
 
         <!-- Inventory -->
-        <div class="content-box-inventory" id="Inventory">
+        <div class="inventory" id="Inventory">
 
         </div>
 
 
 
         <!-- Options -->
-        <div class="content-box-options" id="Options">
+        <div class="options" id="Options">
 
         </div>
 
+
     </div>
+
+
+
+
+    <!-- Effects
+    <div class="effects" id="Effects">
+
+    </div>-->
+
+
 
 
     <script type="text/worker">
@@ -469,6 +590,7 @@
             });
         });
 
+
         on("change:hp change:hp_max sheet:opened", function() { update_healthbar(); });
 
         var update_healthbar = function() {
@@ -478,12 +600,30 @@
                 const hp = +v.hp || 0;
                 const hp_real = (hp > hp_max) ? hp_max : (hp < 0) ? 0 : hp;
 
-                output.healthPercent = (hp_real / hp_max) *20;
+                output.health_value = (hp_real / hp_max) *20;
                 if (hp_real != hp) output.hp = hp_real;
 
                 setAttrs(output);
             });
         };
+
+
+        on("change:mana change:mana_max sheet:opened", function() { update_manabar(); });
+
+        var  update_manabar = function() {
+            getAttrs(['mana', 'mana_max'], function(v) {
+                const output = {};
+                const mana_max = +v.mana_max || 0;
+                const mana = +v.mana || 0;
+                const mana_real = (mana > mana_max) ? mana_max : (mana < 0) ? 0 : mana;
+
+                output.mana_value = (mana_real / mana_max) *20;
+                if (mana_real != mana) output.mana = mana_real;
+
+                setAttrs(output);
+            });
+        };
+
 
     </script>
 
