@@ -427,7 +427,7 @@
         & label {
             text-align: center;
             color: var(--CBase);
-            filter: brightness(60%);
+            filter: brightness(200%);
             font-size: 20px;
             font-weight: 500;
             margin-top: 6px;
