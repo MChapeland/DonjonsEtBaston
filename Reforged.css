@@ -24,6 +24,13 @@
     background: var(--CScrollThumb);
 }
 
+/* INPUT ARROWS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* ----- Page Parameters ----- */
 .charsheet {
     position: absolute;
@@ -205,12 +212,14 @@
     }
 
     .charsheet .statblock {
-        width: 130px;
+        width: 150px;
         height: 30px;
-        background-color: var(--CBase);
+        background-color: #181818;
+        border-radius: 0px 10px 10px 0px;
 
         &:hover {
-            filter: brightness(110%);
+                filter: brightness(150%);
+
             cursor: pointer;
         }
 
@@ -257,6 +266,7 @@
         filter: brightness(75%);
         overflow: hidden;
         text-align: center;
+        border-radius: 0px 10px 10px 0px;
         
         & span {
             color: var(--CBase);
@@ -309,6 +319,7 @@
         height: 30px;
         background-color: var(--CBase);
         overflow: hidden;
+        border-radius: 10px 0px 0px 10px;
 
         & input[type="checkbox"]{
             appearance: none;
@@ -328,18 +339,20 @@
     }
 
     .charsheet .statbox {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         background-color: var(--CBase);
         overflow: hidden;
         text-align: center;
+        border-radius: 10px;
 
         &:hover {
-            filter: brightness(110%);
+            filter: brightness(125%);
+            cursor: pointer;
         }
 
         &:active {
-            filter: brightness(90%);
+            filter: brightness(110%);
         }
         
         & label {
@@ -347,17 +360,40 @@
             color: var(--CBase);
             filter: brightness(250%);
             font-size: 14px;
-            margin-top: -8px;
+            margin-top: -5px;
             font-weight: 500;
+            cursor: pointer;
         }
         
         & span {
             color: var(--CBase);
             filter: brightness(250%);
             font-size: 22px;
-            line-height: 45px;
+            line-height: 35px;
             top: 50%;
             left: 50%;
+            cursor: pointer;
+        }
+    }
+
+    
+
+    .charsheet .valuebox {
+        width: 50px;
+        height: 50px;
+        background-color: var(--CBase);
+        filter: brightness(75%);
+        overflow: hidden;
+        text-align: center;
+        border-radius: 10px;
+        
+        & label {
+            text-align: center;
+            color: var(--CBase);
+            filter: brightness(300%);
+            font-size: 14px;
+            margin-top: -5px;
+            font-weight: 500;
         }
 
         & select {
@@ -385,26 +421,17 @@
                 outline:none;
             }
         }
-        
-        .inputbox {
-            height: 30px;
-            width: 50px;
-            overflow: hidden;
-            margin: 5px 0px 10.5px 2px;
 
-            & input {
-                text-align: center;
-                height: 33px;
-                width: 200%;
-                color: var(--CBase);
-                filter: brightness(250%);
-                font-size: 22px;
-                border: none;
-                background: none;
-                appearance: none;
-                margin: -1px -10px;
-            }
-
+        & input {
+            text-align: center;
+            height: 33px;
+            color: var(--CBase);
+            filter: brightness(300%);
+            font-size: 22px;
+            border: none;
+            background: none;
+            appearance: none;
+            outline: none;
         }
     }
 
@@ -412,27 +439,68 @@
     .charsheet .longbutton {
         width: 140px;
         height: 30px;
-        background-color: var(--CBase);
-        filter: brightness(150%);
+        background-color: var(--CBase); 
+        border-radius: 10px;
 
         &:hover {
-            filter: brightness(160%);
+            filter: brightness(125%);
             cursor: pointer;
         }
 
         &:active {
-            filter: brightness(140%);
+            filter: brightness(110%);
         }
         
         & label {
             text-align: center;
             color: var(--CBase);
-            filter: brightness(200%);
+            filter: brightness(250%);
             font-size: 20px;
             font-weight: 500;
             margin-top: 6px;
             cursor: pointer;
         }
+
+        .arrow-container {
+            background: none; 
+            width: 30px;
+            height: 30px;
+            margin: 5px 0px 10px 0px; 
+            float: left;
+            transition: rotate ease-in-out 0.15s, margin ease-in-out 0.15s;
+            
+            &:has(input[type="checkbox"]:checked){
+                rotate: 90deg;
+                margin: 4px 0px 10px 0px; 
+            }
+        
+            & input[type="checkbox"]{
+                background: none; 
+                z-index: 10;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 30px;
+                height: 40px;
+                margin: -5px; 
+                cursor: pointer;
+                outline: none;
+            }
+        
+            .arrow {
+                background: none; 
+                z-index: 9;
+                border: solid #d1d3d4;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                position: absolute;
+                rotate: -45deg;
+                pointer-events: none;
+                margin: 10px 10px;
+                cursor: pointer;
+            }
+        } 
     }
 
 
@@ -625,9 +693,8 @@
 
 
     .charsheet .resourcebar {
-        background-color: var(--CBase);
-        filter: brightness(75%);
-        width: 200px;
+        background-color: #181818;
+        width: 210px;
         height: 30px;
         overflow: visible;
     }
