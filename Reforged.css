@@ -123,51 +123,36 @@ input::-webkit-inner-spin-button {
         margin-top: 60px;
         position: absolute;
         width: 290px;
-        min-height: 100%;
-        overflow: visible;
+        overflow: hidden;
         
         .character {
             position: absolute;
             margin-top: 10px;
             width: 290px;
-            height: 100%;
-            grid-template-columns: repeat(71, 10px);
-            grid-template-rows: repeat(45, 10px);
-            grid-gap: 0px;
+            height:auto;
             background-color: yellow;
-            display: grid;
             animation: hideEffect 0.15s ease-in-out;
             transform: translateX(-760px);
             transition: transform;
             transition-delay: 0.15s;
-            overflow: scroll;
         }
 
         .core {
-            position: absolute;
             margin-top: 10px;
             width: 290px;
             height: 100%;
-            grid-template-columns: repeat(29, 10px);
-            grid-template-rows: repeat(90, 10px);
-            grid-gap: 0px;
-            display: grid;
             animation: hideEffect 0.15s ease-in-out;
             transform: translateX(-760px);
             transition: transform;
             transition-delay: 0.15s;
-            overflow: scroll;
+            overflow: hidden;
         }
 
         .power {
             position: absolute;
             margin-top: 10px;
             width: 290px;
-            height: 100%;
-            grid-template-columns: repeat(71, 10px);
-            grid-template-rows: repeat(45, 10px);
-            grid-gap: 0px;
-            display: grid;
+            height:auto;
             animation: hideEffect 0.15s ease-in-out;
             transform: translateX(-760px);
             transition: transform;
@@ -178,12 +163,8 @@ input::-webkit-inner-spin-button {
             position: absolute;
             margin-top: 10px;
             width: 290px;
-            height: 100%;
-            grid-template-columns: repeat(71, 10px);
-            grid-template-rows: repeat(45, 10px);
-            grid-gap: 0px;
+            height:auto;
             background-color: green;
-            display: grid;
             animation: hideEffect 0.15s ease-in-out;
             transform: translateX(-760px);
             transition: transform;
@@ -194,17 +175,20 @@ input::-webkit-inner-spin-button {
             position: absolute;
             margin-top: 10px;
             width: 290px;
-            height: 100%;
-            grid-template-columns: repeat(71, 10px);
-            grid-template-rows: repeat(45, 10px);
-            grid-gap: 0px;
+            height:auto;
             background-color: gray;
-            display: grid;
             animation: hideEffect 0.15s ease-in-out;
             transform: translateX(-760px);
             transition: transform;
             transition-delay: 0.15s;
         }
+    }
+
+    .charsheet .gridbox {
+        grid-template-columns: repeat(29, 10px);
+        grid-template-rows: repeat(34, 10px);
+        grid-gap: 0px;
+        display: grid;
     }
 
 
