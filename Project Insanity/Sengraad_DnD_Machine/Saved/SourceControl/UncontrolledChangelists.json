@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Zoom.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/BP_PC.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/BP_Pawn.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IMC_PC.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Rotate.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Move.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_MoveHorizontal.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_MoveVertical.uasset"
+			]
+		}
+	]
+}
