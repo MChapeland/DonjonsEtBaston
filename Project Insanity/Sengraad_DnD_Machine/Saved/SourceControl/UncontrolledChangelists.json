@@ -11,9 +11,11 @@
 				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/BP_Pawn.uasset",
 				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IMC_PC.uasset",
 				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Rotate.uasset",
-				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Move.uasset",
 				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_MoveHorizontal.uasset",
-				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_MoveVertical.uasset"
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_MoveVertical.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_SwitchView.uasset",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Maps/L_Entry.umap",
+				"D:/Games/DnD/GitHub/ParchmentCS/Project Insanity/Sengraad_DnD_Machine/Content/Blueprints/Core/Player/Inputs/IA_Move.uasset"
 			]
 		}
 	]
