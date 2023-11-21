@@ -1,0 +1,5 @@
+res://control.tscn
+res://TestScene.tscn
+res://TestScene.gd
+res://Camera2D.gd
+res://SmoothCamera.gd

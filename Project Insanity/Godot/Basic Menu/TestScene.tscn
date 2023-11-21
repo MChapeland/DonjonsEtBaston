@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqyqplvqlixf2"]
+
+[ext_resource type="Texture2D" uid="uid://b4ho72wliulh3" path="res://icon.svg" id="1_icj42"]
+[ext_resource type="Script" path="res://TestScene.gd" id="1_pwhpk"]
+[ext_resource type="PackedScene" uid="uid://bai6npsmf3k6c" path="res://control.tscn" id="3_hatdr"]
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_pwhpk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_icj42")
+
+[node name="Control" parent="." instance=ExtResource("3_hatdr")]
+offset_left = 33.0216
+offset_top = 47.4689
+offset_right = 33.0216
+offset_bottom = 47.4689
+
+[node name="Window" type="Window" parent="."]
+gui_embed_subwindows = true
+initial_position = 1
